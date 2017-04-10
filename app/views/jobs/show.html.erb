@@ -8,4 +8,11 @@
   <p>岗位描述：<%= @job.description %></p>
   <p>最低薪资：<%= @job.wage_lower_bound %></p>
   <p>最高薪资：<%= @job.wage_upper_bound %></p>
+  <br>
+
+  <div class="resume">
+    <%= link_to("提交简历", new_job_resume_path(@job), class: "btn btn-primary pull-left" ) %>
+  </div>
+
+
 </div>
