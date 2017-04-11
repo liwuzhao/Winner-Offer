@@ -10,7 +10,7 @@ class Admin::JobsController < ApplicationController
             when 'by_upper_bound'
               Job.order('wage_upper_bound DESC')
             else
-              Job.published.recent
+              Job.recent
             end
   end
 
