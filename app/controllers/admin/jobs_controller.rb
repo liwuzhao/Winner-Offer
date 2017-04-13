@@ -5,6 +5,8 @@ class Admin::JobsController < ApplicationController
 
   def index
     @jobs = case params[:order]
+            when 'by resumes'
+              Job.all.sort_by {|job| job.resumes.count }.reverse
             when 'by_lower_bound'
               Job.order('wage_lower_bound DESC')
             when 'by_upper_bound'
@@ -14,18 +16,20 @@ class Admin::JobsController < ApplicationController
             end
   end
 
+
   def new
     @job = Job.new
   end
 
   def create
-    @job = Job.new(job_params)
+   @job = Job.new(job_params)
+   @job.user = current_user
 
-    if @job.save
-      redirect_to admin_jobs_path
-    else
-      render :new
-    end
+     if @job.save
+       redirect_to admin_jobs_path
+     else
+       render :new
+     end
   end
 
   def show
@@ -72,7 +76,7 @@ class Admin::JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden)
+    params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden, :company, :location, :number)
   end
 
 end

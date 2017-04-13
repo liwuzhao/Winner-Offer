@@ -4,13 +4,14 @@
     <h1 class="text-center" style="font-family:Verdana">Job Lsit</h1>
   </div>
   <div class="dropdown clearfix pull-right">
-      <button class="btn btn-basic dropdown-toggle" type="button" data-toggle="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
         Reorder
         <span class="caret"></span>
       </button>
       <ul class="reorder dropdown-menu ">
         <li><%= link_to("By lower wage", jobs_path(:order => "by_lower_bound")) %></li>
         <li><%= link_to("By upper wage", jobs_path(:order => "by_upper_bound")) %></li>
+        <li><%= link_to("By resumes",   admin_jobs_path(:order => "by resumes")) %></li>
         <li><%= link_to("By publish time", jobs_path ) %></li>
       </ul>
   </div>
@@ -21,8 +22,8 @@
     <% @jobs.each do |job| %>
     <div class="row">
         <div class="col-sm-4">
-          <i class="fa fa-address-book" aria-hidden="true"></i>
-          <%= link_to(job.title, job_path(job)) %>
+          <i class="fa fa-id-card-o" aria-hidden="true"></i>
+          <strong><%= link_to(job.title, job_path(job)) %></strong>
         </div>
 
         <div class="col-sm-4">
@@ -32,7 +33,23 @@
 
         <div class="col-md-4">
           <i class="fa fa-envelope" aria-hidden="true"></i>
-          <%= job.contact_email %>
+          <%= job.contact_email  %>
+        </div>
+        <br><br>
+
+        <div class="col-md-4">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          <%= job.company %>
+        </div>
+
+        <div class="col-md-4">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <%= job.location %>
+        </div>
+
+        <div class="col-md-4">
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+          <%= job.created_at %>
         </div>
 
     </div>

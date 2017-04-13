@@ -11,25 +11,45 @@
 
         <p>
           <strong><span>Job Description:</sapn> </strong><br>
+        </p>
+
+        <p class="description">
           <%= simple_format(@job.description, class: "job-description") %>
         </p>
 
         <hr>
 
         <p>
-          <i class="fa fa-jpy" aria-hidden="true"></i>
-          <%= @job.wage_lower_bound %> ~ <%= @job.wage_upper_bound %>
+          <i class="fa fa-building" aria-hidden="true"></i>
+          <%= @job.company %>
         </p>
 
         <p>
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <%= @job.location %>
+        </p>
+
+        <p>
+          <i class="fa fa-jpy" aria-hidden="true"></i>
+          <%= @job.wage_lower_bound %> ~ <%= @job.wage_upper_bound %><br>
+        </p>
+
+        <% if @job.number %>
+            <p>
+              <i class="fa fa-male" aria-hidden="true"></i>
+              空缺：<%= @job.number %>
+            </p>
+        <% end %>
+
+
+        <p>
           <i class="fa fa-envelope" aria-hidden="true"></i>
-          <span>Contact:</span>
-          <strong><%= @job.contact_email %></strong>
+          <strong><%= @job.contact_email %></strong><br>
         </p>
 
         <p>
           <i class="fa fa-calendar" aria-hidden="true"></i>
-          <%= @job.created_at %>
+          <%= @job.created_at %><br>
         </p>
 
     </div>
