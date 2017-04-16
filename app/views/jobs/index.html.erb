@@ -22,33 +22,33 @@
     <% @jobs.each do |job| %>
     <div class="row">
         <div class="col-sm-4">
-          <i class="fa fa-id-card-o" aria-hidden="true"></i>
-          <strong><%= link_to(job.title, job_path(job)) %></strong>
+          <i class="fa fa-id-card-o fa-lg" aria-hidden="true"></i>
+          <%= link_to(job.title, job_path(job)) %>
         </div>
 
         <div class="col-sm-4">
-          <i class="fa fa-jpy" aria-hidden="true"></i>
+          <i class="fa fa-jpy fa-lg" aria-hidden="true"></i>
           <%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %>
         </div>
 
         <div class="col-md-4">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
           <%= job.contact_email  %>
         </div>
         <br><br>
 
         <div class="col-md-4">
-          <i class="fa fa-building" aria-hidden="true"></i>
+          <i class="fa fa-building fa-lg" aria-hidden="true"></i>
           <%= job.company %>
         </div>
 
         <div class="col-md-4">
-          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="color:rgb(202, 12, 12)" ></i>
           <%= job.location %>
         </div>
 
         <div class="col-md-4">
-          <i class="fa fa-clock-o" aria-hidden="true"></i>
+          <i class="fa fa-clock-o fa-lg" aria-hidden="true" style="color:rgb(13, 188, 208)"></i>
           <%= job.created_at %>
         </div>
 

@@ -7,7 +7,7 @@
     <%= simple_form_for [@job, @resume] do |f| %>
           <%= f.input :content, :placeholder => "Self introduction" %>
           <%= f.input :attachment %>
-          <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submiting..."} %>
+          <%= f.submit "Submit", class: "btn btn-primary" %>
     <% end %>
 
 

@@ -49,23 +49,23 @@
           <td><i class="fa fa-jpy" aria-hidden="true"></i><%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %></td>
           <td>
               <%= link_to(edit_admin_job_path(job) ) do%>
-              <i class="fa fa-pencil-square-o" aria-hidden="true" style="color:black"></i>
+              <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true" style="color:black"></i>
               <% end %>
           <td>
               <%= link_to(admin_job_path(job),
                           method: :delete, data: { confirm: "Are you sure?" } ) do%>
-              <i class="fa fa-trash" aria-hidden="true" style="color:black"></i>
+              <i class="fa fa-trash fa-lg" aria-hidden="true" style="color:black"></i>
               <% end %>
           </td>
 
           <td>
                 <% if job.is_hidden %>
                   <%= link_to(publish_admin_job_path(job) , :method => :post,   :class => "btn btn-xs btn-default") do %>
-                  <i class="fa fa-eye" aria-hidden="true"></i>
+                  <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
                 <% end %>
                 <% else %>
                   <%= link_to(hide_admin_job_path(job), :method => :post,  :class => "btn btn-xs btn-default") do %>
-                  <i class="fa fa-ban" aria-hidden="true"></i>
+                  <i class="fa fa-ban fa-lg" aria-hidden="true"></i>
                 <% end %>
                 <% end %>
           </td>
