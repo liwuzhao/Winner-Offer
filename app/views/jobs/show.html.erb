@@ -1,3 +1,4 @@
+<br><br>
 <div class="container-fluid">
     <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 
@@ -7,20 +8,14 @@
           <%= link_to(content_tag(:i, " Back", class: "fa fa-arrow-left"), url_for(jobs_path)) %>
         </div>
         <h1 class="text-center"><%= @job.title %> </h1>
-        <hr>
-        <p>
-          <strong><span>Job Description:</sapn> </strong><br>
-        </p>
-
-        <p>
-          <%= simple_format(@job.description, class: "job-description") %>
-        </p>
-        <hr>
-
-        <p>
+        <p class="text-center">
           <i class="fa fa-building" aria-hidden="true"></i>
           <%= @job.company %>
         </p>
+
+        <hr>
+
+
 
         <p>
           <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -49,6 +44,14 @@
           <i class="fa fa-calendar" aria-hidden="true"></i>
           <%= @job.created_at %><br>
         </p>
+
+        <hr>
+        <p>
+          <strong><span>Job Description:</sapn> </strong><br>
+          <p>
+            <%= simple_format(@job.description, class: "job-description") %>
+          </p>
+        </p><br><br>
 
         <div class="resume text-center">
           <%= link_to("Apply", new_job_resume_path(@job),  class: "btn btn-primary ") %>

@@ -20,9 +20,7 @@
  @import "bootstrap";
  @import "font-awesome";
 
-  body {
-    margin-top: 100px;
-  }
+
   a:link {
     text-decoration: none;
   }
@@ -30,8 +28,14 @@
 
 
 
-
+// -------------Navbar-------------
  /* Add a gray color to all navbar links */
+
+ .navbar-default {
+     margin-bottom: 0;
+     border-radius: 0;
+ }
+
  .navbar li a, .navbar .navbar-brand {
      color: #d5d5d5 !important;
  }
@@ -48,6 +52,47 @@
 
 
 
+
+
+  //---------Box---------
+
+ .box {
+     background-image: url("header1.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     margin-bottom: 50px;
+
+     .box-inner {
+         background-color: rgba(250, 250, 250, 0.69);
+         padding-bottom: 5px;
+         margin-top: 150px;
+         margin-bottom: 150px;
+     }
+
+     .title {
+         text-align: center;
+         margin-bottom: 80px;
+     }
+
+     .slogan {
+         color: #222;
+         margin-top: 10px;
+         margin-bottom: 50px;
+         text-align: center;
+         font-size: 25px;
+         top: 12px;
+     }
+
+     .lead {
+         margin-bottom: 60px;
+         text-align: center;
+         color: white;
+     }
+ }
+
+
+
+// -------- myself ---------
 .list_at_jobs-list{
   border: 1px solid #ccc;
   margin: 3% 0;
@@ -73,4 +118,15 @@
   font-family:Tahoma;
   font-size: 20px;
   color: gray;
+}
+
+//---------Footer---------
+
+footer {
+    color: white;
+}
+
+footer .footer-below {
+    padding: 25px 0;
+    background-color: #233140;
 }
