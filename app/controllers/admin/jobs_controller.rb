@@ -16,7 +16,7 @@ class Admin::JobsController < ApplicationController
             end
   end
 
-
+  
   def new
     @job = Job.new
   end

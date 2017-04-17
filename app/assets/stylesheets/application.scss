@@ -20,53 +20,31 @@
  @import "bootstrap";
  @import "font-awesome";
 
-
-html {
-  height: 100%;
-}
-body {
-  margin-top: 65px;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.content {
-  flex: 1;
-}
-
-
-/* Add a gray color to all navbar links */
-.navbar li a, .navbar .navbar-brand {
-    color: #d5d5d5 !important;
-}
-/* On hover, the dropdown links will turn red */
-.dropdown-menu li a:hover {
-    background-color: grey !important;
-}
-
-/* Dropdown links */
-.dropdown-menu li a {
-    color: #000 !important;
-}
-
-// Footer
-footer {
-    background-color: #2d2d30;
-    color: #f5f5f5;
-    padding: 32px;
-
-}
-
-footer a {
-    color: #f5f5f5;
-}
-
-footer a:hover {
-    color: #777;
+  body {
+    margin-top: 100px;
+  }
+  a:link {
     text-decoration: none;
-}
+  }
 
-//
+
+
+
+
+ /* Add a gray color to all navbar links */
+ .navbar li a, .navbar .navbar-brand {
+     color: #d5d5d5 !important;
+ }
+ /* On hover, the dropdown links will turn red */
+ .dropdown-menu li a:hover {
+     background-color: grey !important;
+ }
+
+ /* Dropdown links */
+ .dropdown-menu li a {
+     color: #000 !important;
+ }
+
 
 
 

@@ -21,12 +21,12 @@
   <div class="col-md-12">
     <% @jobs.each do |job| %>
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-md-4">
           <i class="fa fa-id-card-o fa-lg" aria-hidden="true"></i>
           <%= link_to(job.title, job_path(job)) %>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-md-4">
           <i class="fa fa-jpy fa-lg" aria-hidden="true"></i>
           <%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %>
         </div>

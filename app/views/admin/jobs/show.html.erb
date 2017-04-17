@@ -52,13 +52,13 @@
           <%= @job.created_at %><br>
         </p>
 
-    </div>
 
-    <div class="resume pull-right">
-      <% if current_user && current_user == @job.user %>
-        <%= link_to("Edit", edit_job_path(@job), class: "btn btn-primary ") %>
-      <% end %>
-      <%= link_to("Apply", new_job_resume_path(@job),  class: "btn btn-primary ") %>
     </div>
+        <div class="resume pull-right">
+          <% if current_user && current_user == @job.user %>
+            <%= link_to("Edit", edit_admin_job_path(@job), class: "btn btn-primary ") %>
+          <% end %>
+        </div>
+
 
 </div>
