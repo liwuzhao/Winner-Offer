@@ -31,30 +31,28 @@
       <div class="row">
 
           <div class="col-md-6" style="font-size:20px">
-            <%= link_to(job.title, job_path(job)) %>
+            <p><%= link_to(job.title, job_path(job)) %></p>
           </div>
           <div class="col-md-6">
+            <p></p>
           </div>
 
       </div>
-      <br>
       <div class="row">
           <div class="col-md-2">
               </div>
               <div class="col-md-2">
-                <i class="fa fa-jpy fa-md" aria-hidden="true"></i>
-                <%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %>
+                <p><i class="fa fa-jpy fa-md" aria-hidden="true"></i>
+                <%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %></p>
               </div>
               <div class="col-md-4">
-                <i class="fa fa-address-card-o" aria-hidden="true"></i>  <%= job.category %>
+                <p><i class="fa fa-address-card-o" aria-hidden="true"></i>  <%= job.category %></p>
               </div>
               <div class="col-md-2">
-
+                <p></p>
               </div>
 
-            <br>
           </div>
-          <br>
           <div class="row">
               <div class="col-md-2">
 
