@@ -1,4 +1,11 @@
-<div class="container text-center">
+<style>
+.size{
+  font-size: 15px;
+  font-family:Geneva;
+;
+}
+</style>
+<div class="container text-center size">
 
   <div class="page-header">
     <h1 class="text-center" style="font-family:Verdana">Job Lsit</h1>
@@ -20,39 +27,56 @@
 
   <div class="col-md-12">
     <% @jobs.each do |job| %>
-    <div class="row">
-        <div class="col-md-4">
-          <i class="fa fa-id-card-o fa-lg" aria-hidden="true"></i>
-          <%= link_to(job.title, job_path(job)) %>
-        </div>
 
-        <div class="col-md-4">
-          <i class="fa fa-jpy fa-lg" aria-hidden="true"></i>
-          <%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %>
-        </div>
+      <div class="row">
 
-        <div class="col-md-4">
-          <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
-          <%= job.contact_email  %>
-        </div>
-        <br><br>
+          <div class="col-md-6" style="font-size:20px">
+            <%= link_to(job.title, job_path(job)) %>
+          </div>
+          <div class="col-md-6">
+          </div>
 
-        <div class="col-md-4">
-          <%= job.company %>
-        </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-2">
+              </div>
+              <div class="col-md-2">
+                <i class="fa fa-jpy fa-md" aria-hidden="true"></i>
+                <%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %>
+              </div>
+              <div class="col-md-4">
+                <i class="fa fa-address-card-o" aria-hidden="true"></i>  <%= job.category %>
+              </div>
+              <div class="col-md-2">
 
-        <div class="col-md-4">
-          <i class="fa fa-map-marker fa-lg" aria-hidden="true" style="color:rgb(202, 12, 12)" ></i>
-          <%= job.location %>
-        </div>
+              </div>
 
-        <div class="col-md-4">
-          <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i>
-          <%= job.created_at %>
-        </div>
+            <br>
+          </div>
+          <br>
+          <div class="row">
+              <div class="col-md-2">
 
-    </div>
-    <hr>
+              </div>
+                <div class="col-md-2">
+                  <%= job.company %>
+                </div>
+
+                <div class="col-md-4">
+                  <i class="fa fa-map-marker fa-md" aria-hidden="true" style="color:rgb(202, 12, 12)" ></i>
+                  <%= job.location %>
+                </div>
+
+                <div class="col-md-2">
+                  <span>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <%= time_ago_in_words(job.created_at) %> ago
+                  </span>
+                </div>
+
+          </div>
+          <hr>
     <% end %>
   </div>
   <div class="text-center">

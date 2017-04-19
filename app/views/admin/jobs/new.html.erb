@@ -5,15 +5,17 @@
 
     <%= simple_form_for [:admin,@job] do |f| %>
         <%= f.input :title, :placeholder => "", input_html: { class: "form-control"} %>
+        <%= f.input :category, :collection => ["developer","healthcare", "sales-marketing", "legal", "non-profit", "human-resource", "design", "other"], :selected => "developer" %>
         <%= f.input :description, :placeholder => "", input_html: { class: "form-control"} %>
-        <%= f.input :wage_lower_bound, :label => "薪资下限" %>
-        <%= f.input :wage_upper_bound, :label => "薪资上限" %>
-        <%= f.input :company, :label => "公司名称" %>
-        <%= f.input :location, :label => "工作地点" %>
-        <%= f.input :number, :label => "招聘人数" %>
+        <%= f.input :wage_lower_bound, :label => "Lower wage" %>
+        <%= f.input :wage_upper_bound, :label => "Upper Salary" %>
+        <%= f.input :company, :label => "Company" %>
+        <%= f.input :location, :label => "City" %>
+        <%= f.input :number, :label => "Number of recruits" %>
         <%= f.input :contact_email, :placeholder => "example@email.com" %>
         <%= f.input :is_hidden, :label => "Hidden" %>
         <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submiting..."} %>
+        <br><br>
     <% end %>
 
 </div>

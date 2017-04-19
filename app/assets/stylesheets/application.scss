@@ -21,6 +21,13 @@
  @import "font-awesome";
  @import url(http://fonts.googleapis.com/css?family=Roboto);
 
+ .back-color{
+  background-color: #9E9E9E;
+ }
+
+ .row-flash {
+   margin-bottom: 1000px;
+ }
 
 
  //------ footer -------
@@ -35,8 +42,11 @@
    position:relative;
  }
 
- main{padding-bottom:100px;background-color: #bdb76b;}/* main的padding-bottom值要等于或大于footer的height值 */
+ main{
+   padding-bottom:100px;/* main的padding-bottom值要等于或大于footer的height值 */
+   background-color: #bdb76b;
 
+ }
 
  footer{
    position: absolute;
@@ -180,20 +190,21 @@
 
 
 
-// section
-.caption {
-  margin: 30px;
-  text-align: center;
-  top: 20px;
-}
 
-.thumbnail {
-    border: 0 none;
-    box-shadow: none;
-    margin-top: 60px;
-}
+ //---------Content---------
 
 
+ .caption {
+   margin: 30px;
+   text-align: center;
+   top: 20px;
+ }
+
+ .thumbnail {
+     border: 0 none;
+     box-shadow: none;
+     margin-top: 60px;
+ }
 
 // -------- myself ---------
 

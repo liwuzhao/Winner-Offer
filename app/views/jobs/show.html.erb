@@ -5,7 +5,7 @@
       <br>
       <div class="job-content well" style="border-radius:20px">
           <div class="pull-right">
-            <%= link_to(content_tag(:i, " Back", class: "fa fa-arrow-left"), url_for(jobs_path)) %>
+              <%= link_to(content_tag(:i, " Back", class: "fa fa-arrow-left"), url_for(jobs_path)) %>
           </div>
           <h1 class="text-center"><%= @job.title %> </h1>
           <p class="text-center">
@@ -15,43 +15,45 @@
 
           <hr>
 
+          <div class="row col-md-12">
+              <div class="col-md-4">
+                  <p><i class="fa fa-address-card-o" aria-hidden="true"></i>  <%= @job.category %> </p>
+              </div>
+              <div class="col-md-4">
+                  <p><i class="fa fa-jpy" aria-hidden="true"></i> <%= @job.wage_lower_bound %> ~ <%= @job.wage_upper_bound %> </p>
+              </div>
+              <div class="col-md-4">
+                  <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%= @job.location %></p>
+              </div>
+          </div>
 
+          <div class="row col-md-12">
+              <div class="col-md-4">
+                  <% if @job.number %>
+                    <p>
+                        <i class="fa fa-male" aria-hidden="true"></i>
+                        招聘人数：<%= @job.number %>
+                    </p>
+                  <% end %>
+              </div>
+              <div class="col-md-4">
+                  <p><i class="fa fa-envelope" aria-hidden="true"></i> <strong><%= @job.contact_email %></strong></p>
+              </div>
+              <div class="col-md-4">
+                  <p><span><i class="fa fa-clock-o" aria-hidden="true"></i> <%= time_ago_in_words(@job.created_at) %> ago</span><br></p>
+              </div>
+          </div>
 
-          <p>
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
-            <%= @job.location %>
-          </p>
+          <div class="row col-md-12">
+              <hr>
+              <div class="col-md-4">
+                <strong><span>Job Description:</sapn> </strong><br>
+                <p>
+                  <%= simple_format(@job.description, class: "job-description") %>
+                </p><br>
+              </div>
+          </div>
 
-          <p>
-            <i class="fa fa-jpy" aria-hidden="true"></i>
-            <%= @job.wage_lower_bound %> ~ <%= @job.wage_upper_bound %><br>
-          </p>
-
-          <% if @job.number %>
-              <p>
-                <i class="fa fa-male" aria-hidden="true"></i>
-                空缺：<%= @job.number %>
-              </p>
-          <% end %>
-
-
-          <p>
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            <strong><%= @job.contact_email %></strong><br>
-          </p>
-
-          <p>
-            <i class="fa fa-calendar" aria-hidden="true"></i>
-            <%= @job.created_at %><br>
-          </p>
-
-          <hr>
-          <p>
-            <strong><span>Job Description:</sapn> </strong><br>
-            <p>
-              <%= simple_format(@job.description, class: "job-description") %>
-            </p>
-          </p><br><br>
 
           <div class="resume text-center">
             <%= link_to("Apply", new_job_resume_path(@job),  class: "btn btn-primary ") %>
