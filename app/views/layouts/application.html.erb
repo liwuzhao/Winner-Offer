@@ -13,13 +13,15 @@
     <body>
 
         <div class="container-fluid main">
-          <%= render "common/navbar" %>
 
           <div class="row">
+            <%= render "common/navbar" %>
+          </div>
+          <div class="row flash">
             <%= render "common/flashes" %>
           </div>
 
-          <div class="row">
+          <div class="row navbar_fix">
             <%= yield %>
           </div>
 
