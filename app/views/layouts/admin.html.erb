@@ -9,15 +9,15 @@
     </head>
 
     <body>
-
         <div class="container-fluid main">
 
-            <div class="row navbar_fix_at_admin">
+            <div class="row navbar_fix">
               <%= render "common/navbar" %>
             </div>
-            <div class="row flash">
+            <div class="row">
               <%= render "common/flashes" %>
             </div>
+            <br>
               <div class="col-md-2">
                 <ul class="nav nav-pills nav-stacked" style="max-width: 300px; padding-top:20px;">
                    <li class="active"><%= link_to("Admin Dashboard", admin_jobs_path ) %> </li>
@@ -32,10 +32,6 @@
                 <%= render "common/footer" %>
               </div>
            </div>
-
-
-
-
 
     </body>
 </html>

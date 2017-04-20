@@ -1,12 +1,26 @@
 <br><br><br>
+
 <div class="container-fluid">
     <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 
       <br>
+
       <div class="job-content well" style="border-radius:20px">
           <div class="pull-right">
-              <%= link_to(content_tag(:i, " Back", class: "fa fa-arrow-left"), url_for(jobs_path)) %>
+            <% if current_user && !current_user.is_member_of(@job) %>
+                   <%= link_to("收藏", join_job_path(@job), method: :post, class: "fa fa-star-o") %> |
+            <% else %>
+                   <%= link_to("取消收藏", quit_job_path(@job), method: :post, class: "fa fa-star") %> |
+            <% end %>
+            <%= link_to(content_tag(:i, " Back", class: "fa fa-arrow-left"), url_for(jobs_path)) %>
+
           </div>
+
+
+          <div class="pull-right">
+
+          </div>
+
           <h1 class="text-center"><%= @job.title %> </h1>
           <p class="text-center">
             <i class="fa fa-building" aria-hidden="true"></i>
