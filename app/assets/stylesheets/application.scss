@@ -22,11 +22,16 @@
  @import url(http://fonts.googleapis.com/css?family=Roboto);
 
 
- img {
+ .img-welcome {
      width: 128px;
      height: 128px;
+     border: 10px solid transparent;
  }
+ .img-welcome:hover {
+    border-color: #f1f1f1;
+}
 
+ // 搜索框
  .input-group {
      position: relative;
      display: table;
@@ -40,8 +45,9 @@
      margin-right: 100px;
   }
 
+  //登录弹窗宽度
   .form-inputs{
-    width: 390px;//登录弹窗宽度
+    width: 390px;
   }
 
  // -------- myself ---------

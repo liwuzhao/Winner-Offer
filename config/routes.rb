@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :jobs do
+      collection do
+        get :search
+      end
       member do
         post :publish
         post :hide
