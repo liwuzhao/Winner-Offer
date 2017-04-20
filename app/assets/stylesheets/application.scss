@@ -27,6 +27,23 @@
      height: 128px;
  }
 
+ .input-group {
+     position: relative;
+     display: table;
+     border-collapse: separate;
+     width: 250px; //加上width
+ }
+
+ .form-group {
+     margin-bottom: 10px;
+     margin-top: 10px;
+     margin-right: 100px;
+  }
+
+  .form-inputs{
+    width: 390px;//登录弹窗宽度
+  }
+
  // -------- myself ---------
 
  .welcome_content{
@@ -157,9 +174,9 @@
      border-radius: 0;
  }
 
- .navbar li a, .navbar .navbar-brand {
-     color: #d5d5d5 !important;
- }
+ // .navbar li a, .navbar .navbar-brand {
+ //     color: #9E9E9E !important;
+ // }
 
 
  /* On hover, the dropdown links will turn red */

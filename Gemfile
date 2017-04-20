@@ -41,6 +41,9 @@ gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+gem 'ransack'
+gem 'seo_helper','~> 1.0'
 
 
 group :development do
@@ -57,4 +60,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
   gem 'pg'
-end 
+end
