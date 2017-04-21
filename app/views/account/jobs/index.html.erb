@@ -2,7 +2,7 @@
 <div class="container text-center jos_page_size">
 
   <div class="page-header">
-    <h1 class="text-center" style="font-family:Verdana">工作列表</h1>
+    <h1 class="text-center" style="font-family:Verdana">我的收藏</h1>
   </div>
   <div class="dropdown clearfix pull-right">
       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
@@ -10,14 +10,14 @@
         <span class="caret"></span>
       </button>
       <ul class="reorder dropdown-menu ">
-        <li><%= link_to("按最低薪资排序", jobs_path(:order => "by_lower_bound")) %></li>
-        <li><%= link_to("按最高薪资排序", jobs_path(:order => "by_upper_bound")) %></li>
-        <li><%= link_to("按发表时间排序", jobs_path ) %></li>
+        <li><%= link_to("按最低薪资排序", account_jobs_path(:order => "by_lower_bound")) %></li>
+        <li><%= link_to("按最高薪资排序", account_jobs_path(:order => "by_upper_bound")) %></li>
+        <li><%= link_to("按发表时间排序", account_jobs_path ) %></li>
       </ul>
   </div>
 
   <br>
-  <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
+  <%= render :partial => "favorite_jobs_item", :collection => @jobs, :as => :job %>
   <div class="text-center">
     <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
   </div>

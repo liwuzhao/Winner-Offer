@@ -12,7 +12,7 @@
             <% else %>
                    <%= link_to("取消收藏", quit_job_path(@job), method: :post, class: "fa fa-star") %> |
             <% end %>
-            <%= link_to(content_tag(:i, " Back", class: "fa fa-arrow-left"), url_for(jobs_path)) %>
+            <%= link_to(content_tag(:i, " 返回", class: "fa fa-arrow-left"), url_for(jobs_path)) %>
 
           </div>
 
@@ -61,7 +61,7 @@
           <div class="row col-md-12">
               <hr>
               <div class="col-md-4">
-                <strong><span>Job Description:</sapn> </strong><br>
+                <strong><span>岗位要求:</sapn> </strong><br>
                 <p>
                   <%= simple_format(@job.description, class: "job-description") %>
                 </p><br>
@@ -70,7 +70,7 @@
 
 
           <div class="resume text-center">
-            <%= link_to("Apply", new_job_resume_path(@job),  class: "btn btn-primary ") %>
+            <%= link_to("投递简历", new_job_resume_path(@job),  class: "btn btn-primary ") %>
           </div>
 
       </div>

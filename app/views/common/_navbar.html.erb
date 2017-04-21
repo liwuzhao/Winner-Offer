@@ -4,7 +4,7 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/"><i class="fa fa-trophy fa-lg" style="color:rgb(218,165,32)" aria-hidden="true"></i>Winner&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
-            <a class="navbar-brand" href="/jobs">Offers</a>
+            <a class="navbar-brand" href="/jobs">工作</a>
 
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -24,10 +24,11 @@
                     </a>
                     <ul class="dropdown-menu">
                       <% if current_user.admin? %>
-                          <li><%= link_to("<span class='fa fa-home fa-lg'></span> Admin Panel".html_safe, admin_jobs_path) %></li>
+                          <li><%= link_to("<span class='fa fa-home fa-lg'></span> 管理员面板".html_safe, admin_jobs_path) %></li>
                       <% end %>
-                          <li><%= link_to( "<span class='fa fa-database fa-fa-2x'></span> 个人中心".html_safe, edit_account_user_path(current_user) )%></li>
-                          <li><%= link_to("<span class='fa fa-sign-out fa-lg'></span> Quit".html_safe, destroy_user_session_path,  method: :delete) %></li>
+                          <li><%= link_to("<span class='fa fa-heart fa-fa-lg'></span> 我的收藏".html_safe, account_jobs_path) %></li>
+                          <li><%= link_to("<span class='fa fa-database fa-fa-2x'></span> 个人中心".html_safe, edit_account_user_path(current_user) )%></li>
+                          <li><%= link_to("<span class='fa fa-sign-out fa-lg'></span> 退出".html_safe, destroy_user_session_path,  method: :delete) %></li>
                     </ul>
                 </li>
               <% end %>

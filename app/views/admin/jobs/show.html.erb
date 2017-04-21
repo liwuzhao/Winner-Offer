@@ -47,7 +47,7 @@
           <div class="row col-md-12">
               <hr>
               <div class="col-md-4">
-                <strong><span>Job Description:</sapn> </strong><br>
+                <strong><span>岗位要求:</sapn> </strong><br>
                 <p>
                   <%= simple_format(@job.description, class: "job-description") %>
                 </p><br>
@@ -56,7 +56,9 @@
 
 
           <div class="resume text-center">
-            <%= link_to("Apply", new_job_resume_path(@job),  class: "btn btn-primary ") %>
+            <%= link_to("投递简历", new_job_resume_path(@job),  class: "btn btn-primary ") %>
+            <%= link_to("编辑",edit_admin_job_path(@job), class: "btn btn-primary" )%>
+
           </div>
 
       </div>

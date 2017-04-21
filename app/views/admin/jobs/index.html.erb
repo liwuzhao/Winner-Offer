@@ -2,40 +2,40 @@
 <div class="col-md-12">
   <div class="dropdown clearfix pull-right btn-group">
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-      Reorder
+      排序
       <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
-      <li><%= link_to("By lower wage",   admin_jobs_path(:order => "by_lower_bound")) %></li>
-      <li><%= link_to("By upper wage",   admin_jobs_path(:order => "by_upper_bound")) %></li>
-      <li><%= link_to("By resumes",   admin_jobs_path(:order => "by resumes")) %></li>
-      <li><%= link_to("By publish time", admin_jobs_path ) %></li>
+      <li><%= link_to("按最低薪资排序",   admin_jobs_path(:order => "by_lower_bound")) %></li>
+      <li><%= link_to("按最高薪资排序",   admin_jobs_path(:order => "by_upper_bound")) %></li>
+      <li><%= link_to("按简历数量排序",   admin_jobs_path(:order => "by resumes")) %></li>
+      <li><%= link_to("按发表时间排序", admin_jobs_path ) %></li>
     </ul>
-    <a href = jobs/new , class="btn btn-primary" role="button">Add a job</a>
+    <a href = jobs/new , class="btn btn-primary" role="button">发表职缺</a>
   </div>
 
   <table class="table text-center table-striped list">
     <thead class="font">
       <td class="text-left">
-        Name
+        工作
       </td>
       <td>
-        Resumes
+        简历数量
       </td>
       <td>
-        Salary
+        工资
       </td>
       <td>
-        Edit
+        编辑
       </td>
       <td>
-        Delete
+        删除
       </td>
       <td>
-        Publish/Hide
+        公开/隐藏
       </td>
       <td>
-        Created Time
+        发表时间
       </td>
     </thead>
     <tbody>

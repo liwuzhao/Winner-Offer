@@ -1,14 +1,14 @@
 <br><br><br><br><br><br>
 <div class="container well" style="border-radius:20px">
 
-  <h3 class="text-center"> Upload Resume to <%= @job.title %></h3>
+  <h3 class="text-center"> 提交简历到 <%= @job.title %></h3>
 
   <hr>
 
     <%= simple_form_for [@job, @resume] do |f| %>
-          <%= f.input :content, :placeholder => "Self introduction" %>
-          <%= f.input :attachment %>
-          <%= f.submit "Submit", class: "btn btn-primary" %>
+          <%= f.input :content, :placeholder => "自我介绍", :label => "简历内容" %>
+          <%= f.input :attachment, :label => "附件" %>
+          <%= f.submit "提交", class: "btn btn-primary" %>
     <% end %>
 
 
