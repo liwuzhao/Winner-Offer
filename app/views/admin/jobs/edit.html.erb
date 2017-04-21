@@ -6,7 +6,7 @@
 
     <%= simple_form_for [:admin, @job ] do |f| %>
         <%= f.input :title, input_html: { class: "form-control"} %>
-        <%= f.input :category, :collection => ["Developer","Healthcare", "Sales", "Legal", "non-profit", "Human-resource", "Design", "Other"], :selected => "developer" %>
+        <%= f.input :category, :collection => ["开发","医护", "销售", "法律", "人力资源", "设计", "其他"], :selected => "开发" %>
         <%= f.input :description, input_html: { class: "form-control"} %>
         <%= f.input :wage_lower_bound, :label => "薪资下限" %>
         <%= f.input :wage_upper_bound, :label => "薪资上限" %>
