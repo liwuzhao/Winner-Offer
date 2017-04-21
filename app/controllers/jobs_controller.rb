@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   before_action :validate_search_key, only: [:search]
-  before_action :authenticate_user!, only: [:join, :quit]
+  before_action :authenticate_user!, only: [:quit]
 
 
   def index
@@ -26,14 +26,20 @@ class JobsController < ApplicationController
 
   def join
     @job = Job.find(params[:id])
-    if !current_user.is_member_of(@job)
+
+    if !current_user
+      redirect_to job_path(@job)
+      flash[:warning] = "你需要先登录账号"
+    else if !current_user.is_member_of(@job)
       current_user.join!(@job)
       flash[:notice] = "收藏成功"
     else
       flash[:warning] = "你已经收藏这个岗位了！"
     end
-    redirect_to job_path(@job)
-  end
+      redirect_to job_path(@job)
+    end
+end
+
 
   def quit
     @job = Job.find(params[:id])

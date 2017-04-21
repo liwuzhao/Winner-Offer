@@ -7,11 +7,11 @@
 
       <div class="job-content well" style="border-radius:20px">
           <div class="pull-right">
-            <% if current_user && !current_user.is_member_of(@job) %>
-                   <%= link_to("收藏", join_job_path(@job), method: :post, class: "fa fa-star-o") %> |
+            <% if current_user && current_user.is_member_of(@job) %>
+                <%= link_to("取消收藏", quit_job_path(@job), method: :post, class: "fa fa-star") %> |
             <% else %>
-                   <%= link_to("取消收藏", quit_job_path(@job), method: :post, class: "fa fa-star") %> |
-            <% end %>
+                <%= link_to("收藏", join_job_path(@job), method: :post, class: "fa fa-star-o") %> |
+              <% end %>
             <%= link_to(content_tag(:i, " 返回", class: "fa fa-arrow-left"), url_for(jobs_path)) %>
 
           </div>
