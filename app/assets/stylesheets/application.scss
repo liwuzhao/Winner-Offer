@@ -22,7 +22,9 @@
  @import url(http://fonts.googleapis.com/css?family=Roboto);
 
 
-
+ .nav-tabs li a {
+     color: #777;
+ }
  // -------- myself ---------
 
  .logo{
@@ -259,7 +261,7 @@
  .thumbnail {
     border: 0 none;
     box-shadow: none;
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 50px;
     background-color: rgb(229,229,229);
  }
