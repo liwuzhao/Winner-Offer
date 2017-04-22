@@ -1,0 +1,12 @@
+<br><br><br>
+<div class="container text-center jobs_page_size">
+
+  <h1 class="text-center" style="font-family:Verdana">我的收藏</h1><br>
+  <hr>
+
+  <br>
+  <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
+  <div class="text-center">
+    <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+  </div>
+</div>
