@@ -1,26 +1,29 @@
-<br>
-<div class="container text-center jos_page_size">
 
-  <div class="page-header">
-    <h1 class="text-center" style="font-family:Verdana">Job Lsit</h1>
-  </div>
-  <div class="pull-right">
-    <%= link_to(content_tag(:i, " Check All Jobs", class: "fa fa-reply-all"), jobs_path) %> |
-    <%= link_to(content_tag(:i, " Back", class: "fa fa-arrow-left"), url_for(:back)) %>
-  </div>
-  <br>
-  <% if @jobs.blank?%>
-    <br>
-    <div>
-      Opps! No any results matched, please try again.
+
+<br><br><br>
+<div class="container text-center jobs_page_size">
+
+  <h1 class="text-center" style="font-family:Verdana">工作列表</h1><br>
+
+
+    <div class="pull-right">
+      <%= link_to(content_tag(:i, " Check All Jobs", class: "fa fa-reply-all"), jobs_path) %> |
+      <%= link_to(content_tag(:i, " Back", class: "fa fa-arrow-left"), url_for(:back)) %>
     </div>
-  <% else %>
+
+
     <br>
+    <% if @jobs.blank?%>
+      <br>
+      <div>
+        Opps! No any results matched, please try again.
+      </div>
+    <% else %>
+      <br>
 
-    <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
-    <div class="text-center">
-      <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
-    </div>
-  <% end %>
-
+      <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
+      <div class="text-center">
+        <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+      </div>
+    <% end %>
 </div>
