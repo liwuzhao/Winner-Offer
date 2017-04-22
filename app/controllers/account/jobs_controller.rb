@@ -1,3 +1,4 @@
+#筛选出已投递的工作
 class Account::JobsController < ApplicationController
   before_action :authenticate_user!
 
