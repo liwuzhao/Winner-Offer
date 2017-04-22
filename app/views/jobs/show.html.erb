@@ -68,11 +68,13 @@
               </div>
           </div>
 
-
-          <div class="resume text-center">
-            <%= link_to("投递简历", new_job_resume_path(@job),  class: "btn btn-primary ") %>
-          </div>
-
+          <% if current_user && current_user.has_applied?(@job) %>
+              <%= link_to("已投简历", new_job_resume_path(@job),  class: "btn btn-primary disabled ") %>
+          <% else %>
+            <div class="resume text-center">
+              <%= link_to("投递简历", new_job_resume_path(@job),  class: "btn btn-primary ") %>
+            </div>
+          <% end %>
       </div>
 
     </div>

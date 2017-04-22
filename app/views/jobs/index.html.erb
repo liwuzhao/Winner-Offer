@@ -3,7 +3,7 @@
 
   <h1 class="text-center" style="font-family:Verdana">工作列表</h1><br>
     <ul class="nav nav-tabs">
-      <li style="margin-left:190px;"><%= link_to "所有职位", jobs_path(:category => "所有职位" ) %></li>
+      <li style="margin-left:190px;"><%= link_to "所有职位", jobs_path %></li>
       <li><%= link_to "设计", jobs_path(:category => "设计" ) %></li>
       <li><%= link_to "销售", jobs_path(:category => "销售" ) %></li>
       <li><%= link_to "法律", jobs_path(:category => "法律" ) %></li>
@@ -15,7 +15,6 @@
 
   <div class="dropdown clearfix pull-right">
       <br>
-      <% if !params[:category].present? || params[:category]=='所有职位' %>
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
           排序
           <span class="caret"></span>
@@ -25,7 +24,6 @@
           <li><%= link_to("按最高薪资排序", jobs_path(:order => "by_upper_bound")) %></li>
           <li><%= link_to("按发表时间排序", jobs_path ) %></li>
         </ul>
-      <% end %>
   </div>
 
   <br>
