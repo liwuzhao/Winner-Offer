@@ -11,10 +11,13 @@ class Job < ApplicationRecord
   belongs_to :user
   has_many :resumes
 
-  #收藏
+  #投递历史
   has_many :job_relationships
   has_many :members, through: :job_relationships, source: :user
 
+  #收藏
+  has_many :job_favorites
+  has_many :members, through: :job_favorites, source: :user
 
 
   def hide!

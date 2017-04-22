@@ -41,7 +41,7 @@ class JobsController < ApplicationController
     if !current_user
       redirect_to job_path(@job)
       flash[:warning] = "你需要先登录账号"
-    elsif !current_user.is_member_of(@job)
+    elsif !current_user.is_member_of?(@job)
       current_user.join!(@job)
       flash[:notice] = "收藏成功"
     else
@@ -54,7 +54,7 @@ class JobsController < ApplicationController
 
   def quit
     @job = Job.find(params[:id])
-    if current_user.is_member_of(@job)
+    if current_user.is_member_of?(@job)
       current_user.quit!(@job)
       flash[:alert] = "已移出收藏"
     else
