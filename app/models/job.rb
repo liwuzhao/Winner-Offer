@@ -16,6 +16,7 @@ class Job < ApplicationRecord
   has_many :members, through: :job_relationships, source: :user
 
 
+
   def hide!
     self.is_hidden = true
     self.save
