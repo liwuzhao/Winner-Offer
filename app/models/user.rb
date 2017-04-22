@@ -9,19 +9,6 @@ class User < ApplicationRecord
 
   has_many :job_relationships
   has_many :participated_jobs, :through => :job_relationships, :source => :job
-  has_many :applied_jobs, :through => :job_relationships, :source => :job
-
-
-  # 判断user是否申请工作
-  def has_applied?(job)
-    applied_jobs.include?(job)
-  end
-
-  #申请工作
-  def apply!(job)
-    applied_jobs << job
-  end
-
 
   # 判断是否收藏
   def is_member_of(job)
