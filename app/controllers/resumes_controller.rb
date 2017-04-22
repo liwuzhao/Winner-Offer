@@ -4,6 +4,10 @@ class ResumesController < ApplicationController
   def new
     @job = Job.find(params[:job_id])
     @resume = Resume.new
+    if current_user.has_applied?(@job)
+      flash[:warning] = "你已经申请过该岗位了！"
+      redirect_to job_path(@job)
+    end
   end
 
   def create
