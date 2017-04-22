@@ -11,8 +11,10 @@ class Job < ApplicationRecord
   belongs_to :user
   has_many :resumes
 
+  #收藏
   has_many :job_relationships
   has_many :members, through: :job_relationships, source: :user
+
 
   def hide!
     self.is_hidden = true

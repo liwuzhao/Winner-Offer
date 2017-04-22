@@ -7,24 +7,18 @@ class User < ApplicationRecord
   has_many :jobs
   has_many :resumes
 
+  #收藏
   has_many :job_relationships
-  has_many :participated_jobs, :through => :job_relationships, :source => :job
+  has_many :applied_jobs, :through => :job_relationships, :source => :job
 
-  # 判断是否收藏
-  def is_member_of(job)
-    participated_jobs.include?(job)
+  def has_applied?(job)
+    applied_jobs.include?(job)
   end
 
-  # 实际收藏和取消收藏
-
-  def join!(job)
-    participated_jobs << job
+  def apply!(job)
+    applied_jobs << job
   end
 
-
-  def quit!(job)
-    participated_jobs.delete(job)
-  end
 
   # 判断是否为admin
   def admin?

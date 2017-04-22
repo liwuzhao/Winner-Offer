@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :user, :controllers => { registrations: 'registrations' }
+  devise_for :users, :controllers => { :registrations => "users/registrations" }
   root 'welcome#index'
 
   namespace :admin do

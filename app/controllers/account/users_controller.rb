@@ -1,7 +1,6 @@
 class Account::UsersController < ApplicationController
   before_action :authenticate_user!
 
-
   def edit
     @user = current_user
   end
@@ -22,6 +21,6 @@ class Account::UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:username, :email)
   end
-  
+
 
 end

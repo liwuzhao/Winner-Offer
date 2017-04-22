@@ -1,19 +1,11 @@
 class Admin::JobsController < ApplicationController
   before_action :authenticate_user! , only: [:new, :create, :update, :edit, :destroy]
+  before_action :find_job_and_check_permission , only: [:edit, :update, :destroy]
   before_action :require_is_admin
   layout "admin"
 
   def index
-    @jobs = case params[:order]
-            when 'by resumes'
-              Job.all.sort_by {|job| job.resumes.count }.reverse.paginate(:page => params[:page], :per_page => 15)
-            when 'by_lower_bound'
-              Job.order('wage_lower_bound DESC').paginate(:page => params[:page], :per_page => 15)
-            when 'by_upper_bound'
-              Job.order('wage_upper_bound DESC').paginate(:page => params[:page], :per_page => 15)
-            else
-              Job.recent.paginate(:page => params[:page], :per_page => 15)
-            end
+    @jobs = Job.where(:user => current_user).paginate(:page => params[:page], :per_page => 15)
   end
 
 
@@ -77,6 +69,14 @@ class Admin::JobsController < ApplicationController
 
 
   private
+
+  def find_job_and_check_permission
+    @job = Job.find(params[:id])
+
+    if @job.user != current_user
+      redirect_to admin_jobs_path, alert: "你没有权限进行此操作。"
+    end
+  end
 
   def job_params
     params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden, :company, :location, :number, :category)
