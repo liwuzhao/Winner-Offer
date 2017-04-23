@@ -7,10 +7,12 @@
     <%= simple_form_for [:admin,@job] do |f| %>
         <%= f.input :title, :placeholder => "", input_html: { class: "form-control"} %>
         <%= f.input :category, :collection => ["开发","医护", "销售", "法律", "人力资源", "设计", "其他"], :selected => "开发" %>
-        <%= f.input :description, input_html: { class: "form-control"},:label => "岗位需求" %>
-        <%= f.input :wage_lower_bound, :label => "最低工资" %>
-        <%= f.input :wage_upper_bound, :label => "最高工资" %>
-        <%= f.input :company, :label => "公司名臣" %>
+        <%= f.input :description, input_html: { class: "form-control description"},:label => "岗位需求" %>
+        <%= f.input :wage_lower_bound, :label => '薪资' do %>
+           <%= f.input_field :wage_lower_bound, :as => :string, class: "wage" %> <span class="wage-form"> ~</span>
+           <%= f.input_field :wage_upper_bound, :as => :string, class: "wage" %> <span class="wage-form"></span>
+        <% end %>
+        <%= f.input :company, :label => "公司名称" %>
         <%= f.input :location, :label => "城市" %>
         <%= f.input :number, :label => "招聘人数" %>
         <%= f.input :contact_email, :label => "联系邮箱" %>

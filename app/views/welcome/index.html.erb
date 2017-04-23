@@ -1,3 +1,11 @@
+<head>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+    
+
+</head>
+
 <div class="jumbotron">
   <div class="main-heading title">
     <h1 >Winner</h1>
@@ -15,17 +23,17 @@
   <h1>关于我们</h1>
   <hr style="width:120px;">
   <div class="row">
-    <div class="col-sm-4 thumbnail">
+    <div id="trip1" class="col-sm-4 thumbnail">
       <h3><strong>高效</strong></h3><br>
       <p><i class="fa fa-rocket fa-5x" aria-hidden="true"></i></p>
       <p>第一时间将你的简历送达</p>
     </div>
-    <div class="col-sm-4 thumbnail">
+    <div id="trip1" class="col-sm-4 thumbnail">
       <h3><strong>有干货</strong></h3><br>
       <p><i class="fa fa-building fa-5x" aria-hidden="true"></i></p>
       <p>我们提供大量优质的工作岗位</p>
     </div>
-    <div class="col-sm-4 thumbnail">
+    <div id="trip1" class="col-sm-4 thumbnail">
       <h3><strong>简便</strong></h3><br>
       <p><i class="fa fa-hand-o-up fa-5x" aria-hidden="true"></i></p>
       <p>提交简历只需一步</p>
@@ -121,3 +129,23 @@
         </div>
     </div>
 </section>
+
+
+<!-- Script to Activate the Carousel -->
+   <script>
+   $('.carousel').carousel({
+       interval: 5000 //changes the speed
+   })
+
+   $('#bootstrap-touch-slider').bsTouchSlider();
+
+   </script>
+
+  <script>
+   $(document).ready(function () {
+   $('.material-button-toggle').click(function () {
+       $(this).toggleClass('open');
+       $('.option').toggleClass('scale-on');
+   });
+  });
+ </script>

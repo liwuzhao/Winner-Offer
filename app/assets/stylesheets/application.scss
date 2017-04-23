@@ -22,10 +22,31 @@
  @import url(http://fonts.googleapis.com/css?family=Roboto);
 
 
- .nav-tabs li a {
-     color: #777;
- }
+
+
  // -------- myself ---------
+
+ #trip1 {
+     transition: box-shadow 0.7s;
+ }
+ #trip1:hover{
+   box-shadow: 5px 0px 40px rgba(0,0,0, 0.9)
+ }
+ 
+ .wage{
+   width: 100px;
+   border-radius: 5px;
+ }
+
+ .wage-form{
+   font-weight: 600;
+   font-size: 16px;
+   color: #666;
+ }
+
+.nav-tabs li a {
+    color: #777;
+}
 
  .logo{
    margin-right: 30px;
