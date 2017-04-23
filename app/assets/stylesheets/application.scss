@@ -21,9 +21,29 @@
  @import "font-awesome";
  @import url(http://fonts.googleapis.com/css?family=Roboto);
 
+ .add_job{
+   min-width: 65%;
+ }
 
+ .add_job_description{
+   min-height: 150px;
+ }
 
+ .job-resume-box{
+   min-height: 475px;
+   margin-top: 125px;
 
+   h3{
+     text-align: center;
+   }
+ }
+ .resume-content{
+   height: 200px !important;
+   width: 118%;
+ }
+ .resume-attachment{
+   font-size: 16px;
+ }
  // -------- myself ---------
 
  #trip1 {
@@ -32,7 +52,7 @@
  #trip1:hover{
    box-shadow: 5px 0px 40px rgba(0,0,0, 0.9)
  }
- 
+
  .wage{
    width: 100px;
    border-radius: 5px;

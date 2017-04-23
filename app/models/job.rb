@@ -6,6 +6,7 @@ class Job < ApplicationRecord
   validates :location, presence:true
   validates :company, presence:true
   validates :category, presence:true
+  validates :number, presence:true
   validates :wage_lower_bound, numericality: { greater_than: 0}
   validates :wage_lower_bound, numericality: { less_than: :wage_upper_bound, message: "薪水下限不能高于薪水上限"}
   belongs_to :user
