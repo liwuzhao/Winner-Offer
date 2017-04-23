@@ -1,11 +1,11 @@
 <br><br><br>
 
 <div class="container-fluid">
-    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 well"  style="border-radius:20px">
 
       <br>
 
-      <div class="job-content well" style="border-radius:20px">
+      <div class="job-content">
 
 
           <div class="pull-right">
@@ -64,15 +64,16 @@
               </div>
           </div>
 
-
-          <div class="resume text-center">
-                <% if current_user && current_user.has_applied?(@job) %>
-                  <%= link_to("已投递简历", '#', class: "btn btn-primary
-                              disabled", method: :get) %>
-                <% else %>
-                  <%= link_to("投递简历", new_job_resume_path(@job),  class: "btn btn-primary ") %>
-                <% end %>
-          </div>
+          <% if !current_user.admin? %>
+            <div class="resume text-center">
+                  <% if current_user && current_user.has_applied?(@job) %>
+                    <%= link_to("已投递简历", '#', class: "btn btn-primary
+                                disabled", method: :get) %>
+                  <% else %>
+                    <%= link_to("投递简历", new_job_resume_path(@job),  class: "btn btn-primary ") %>
+                  <% end %>
+            </div>
+          <% end %>
 
       </div>
 

@@ -1,5 +1,6 @@
 class ResumesController < ApplicationController
   before_action :authenticate_user!
+  before_action :check_permission
 
   def new
     @job = Job.find(params[:job_id])
@@ -26,6 +27,14 @@ class ResumesController < ApplicationController
   end
 
   private
+
+  def check_permission
+    @job = Job.find(params[:job_id])
+    if current_user.admin?
+      flash[:warning] = "只有普通用户才能投递简历"
+      redirect_to job_path(@job)
+    end
+  end
 
   def resume_params
     params.require(:resume).permit(:content, :attachment)
