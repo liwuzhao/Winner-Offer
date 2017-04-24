@@ -1,12 +1,14 @@
 class ResumesController < ApplicationController
-  before_action :authenticate_user!
   before_action :check_permission
 
   def new
     @job = Job.find(params[:job_id])
     @resume = Resume.new
-    if current_user.has_applied?(@job)
+    if current_user && current_user.has_applied?(@job)
       flash[:warning] = "你已经申请过该岗位了！"
+      redirect_to job_path(@job)
+    elsif !current_user
+      flash[:warning] = "请先登录账号"
       redirect_to job_path(@job)
     end
   end
@@ -30,7 +32,7 @@ class ResumesController < ApplicationController
 
   def check_permission
     @job = Job.find(params[:job_id])
-    if current_user.admin?
+    if current_user && current_user.admin?
       flash[:warning] = "只有普通用户才能投递简历"
       redirect_to job_path(@job)
     end
