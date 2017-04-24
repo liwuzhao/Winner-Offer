@@ -1,33 +1,36 @@
-<br><br><br>
-<div class="container text-center jobs_page_size">
+<div class="container-fluid jobs-show-page">
+  <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+    <h1 class="text-center" style="font-family:Verdana">工作列表</h1><br>
+      <ul class="nav nav-tabs">
+        <li style="margin-left:190px;"><%= link_to "所有职位", jobs_path %></li>
+        <li><%= link_to "设计", jobs_path(:category => "设计" ) %></li>
+        <li><%= link_to "销售", jobs_path(:category => "销售" ) %></li>
+        <li><%= link_to "法律", jobs_path(:category => "法律" ) %></li>
+        <li><%= link_to "开发", jobs_path(:category => "开发" ) %></li>
+        <li><%= link_to "人力资源", jobs_path(:category => "人力资源" ) %></li>
+        <li><%= link_to "医护", jobs_path(:category => "医护" ) %></li>
 
-  <h1 class="text-center" style="font-family:Verdana">工作列表</h1><br>
-    <ul class="nav nav-tabs">
-      <li style="margin-left:190px;"><%= link_to "所有职位", jobs_path %></li>
-      <li><%= link_to "设计", jobs_path(:category => "设计" ) %></li>
-      <li><%= link_to "销售", jobs_path(:category => "销售" ) %></li>
-      <li><%= link_to "法律", jobs_path(:category => "法律" ) %></li>
-      <li><%= link_to "开发", jobs_path(:category => "开发" ) %></li>
-      <li><%= link_to "人力资源", jobs_path(:category => "人力资源" ) %></li>
-      <li><%= link_to "医护", jobs_path(:category => "医护" ) %></li>
-    </ul>
+      </ul>
 
-  <div class="dropdown clearfix pull-right">
-      <br>
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-          排序
-          <span class="caret"></span>
-        </button>
-        <ul class="reorder dropdown-menu ">
-          <li><%= link_to("按最低薪资排序", jobs_path(:order => "by_lower_bound")) %></li>
-          <li><%= link_to("按最高薪资排序", jobs_path(:order => "by_upper_bound")) %></li>
-          <li><%= link_to("按发表时间排序", jobs_path ) %></li>
-        </ul>
-  </div>
+    <div class="dropdown  pull-right">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            排序
+            <span class="caret"></span>
+          </button>
+          <ul class="reorder dropdown-menu ">
+            <li><%= link_to("按最低薪资排序", jobs_path(:order => "by_lower_bound")) %></li>
+            <li><%= link_to("按最高薪资排序", jobs_path(:order => "by_upper_bound")) %></li>
+            <li><%= link_to("按发表时间排序", jobs_path ) %></li>
+          </ul>
+    </div>
 
-  <br>
-  <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
-  <div class="text-center">
-    <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+    <br>
+
+    <br><br><br>
+      <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
+      <div class="text-center">
+        <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+      </div>
+
   </div>
 </div>

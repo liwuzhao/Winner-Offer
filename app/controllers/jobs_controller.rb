@@ -16,11 +16,11 @@ class JobsController < ApplicationController
     #排序
     @jobs = case params[:order]
             when 'by_lower_bound'
-              @jobs.published.order('wage_lower_bound DESC').paginate(:page => params[:page], :per_page => 5)
+              @jobs.published.order('wage_lower_bound DESC').paginate(:page => params[:page], :per_page => 10)
             when 'by_upper_bound'
-              @jobs.published.order('wage_upper_bound DESC').paginate(:page => params[:page], :per_page => 5)
+              @jobs.published.order('wage_upper_bound DESC').paginate(:page => params[:page], :per_page => 10)
             else
-              @jobs.published.recent.paginate(:page => params[:page], :per_page => 5)
+              @jobs.published.recent.paginate(:page => params[:page], :per_page => 10)
             end
 
   end
