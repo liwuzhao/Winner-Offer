@@ -21,6 +21,16 @@
  @import "font-awesome";
  @import url(http://fonts.googleapis.com/css?family=Roboto);
 
+
+ // -------- myself ---------
+
+ #trip1 {
+     transition: box-shadow 0.7s;
+ }
+ #trip1:hover{
+   box-shadow: 5px 0px 40px rgba(0,0,0, 0.9)
+ }
+
  .add_job{
    min-width: 65%;
  }
@@ -44,15 +54,6 @@
  .resume-attachment{
    font-size: 16px;
  }
- // -------- myself ---------
-
- #trip1 {
-     transition: box-shadow 0.7s;
- }
- #trip1:hover{
-   box-shadow: 5px 0px 40px rgba(0,0,0, 0.9)
- }
-
  .wage{
    width: 100px;
    border-radius: 5px;
@@ -198,7 +199,6 @@
  main{
    padding-bottom:100px;/* main的padding-bottom值要等于或大于footer的height值 */
    background-color: #bdb76b;
-
  }
 
  footer{
@@ -354,97 +354,49 @@
 
 
 
-/****** LOGIN MODAL ******/
-.loginmodal-container {
-  padding: 30px;
-  max-width: 350px;
-  width: 100% !important;
-  background-color: #F7F7F7;
-  margin: 0 auto;
-  border-radius: 2px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  font-family: roboto;
-}
+ /*===== user ====*/
+ .user_setup{
+     height: 770px;
+     background: image_url("back_in_user.jpg") no-repeat scroll top center/ cover;
+     margin-bottom: -150px;
+ }
 
-.loginmodal-container h1 {
-  text-align: center;
-  font-size: 1.8em;
-  font-family: roboto;
-}
 
-.loginmodal-container input[type=submit] {
-  width: 100%;
-  display: block;
-  margin-bottom: 10px;
-  position: relative;
-}
+ .user_setup_content{
+     background: #fff;
+     margin-top: 50px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     box-shadow: 1px 3px 5px #333;
+     border: 5px solid #666;
+     border-radius: 25px;
 
-.loginmodal-container input[type=text], input[type=password] {
-  height: 44px;
-  font-size: 16px;
-  width: 100%;
-  margin-bottom: 10px;
-  -webkit-appearance: none;
-  background: #fff;
-  border: 1px solid #d9d9d9;
-  border-top: 1px solid #c0c0c0;
-  /* border-radius: 2px; */
-  padding: 0 8px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
+     opacity:0.95;
+     filter:alpha(opacity=95);
 
-.loginmodal-container input[type=text]:hover, input[type=password]:hover {
-  border: 1px solid #b9b9b9;
-  border-top: 1px solid #a0a0a0;
-  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-}
+     h2{
+       text-align: center;
+     }
 
-.loginmodal {
-  text-align: center;
-  font-size: 14px;
-  font-family: 'Arial', sans-serif;
-  font-weight: 700;
-  height: 36px;
-  padding: 0 8px;
-/* border-radius: 3px; */
-/* -webkit-user-select: none;
-  user-select: none; */
-}
 
-.loginmodal-submit {
-  /* border: 1px solid #3079ed; */
-  border: 0px;
-  color: #fff;
-  text-shadow: 0 1px rgba(0,0,0,0.1);
-  background-color: #4d90fe;
-  padding: 17px 0px;
-  font-family: roboto;
-  font-size: 14px;
-  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
-}
 
-.loginmodal-submit:hover {
-  /* border: 1px solid #2f5bb7; */
-  border: 0px;
-  text-shadow: 0 1px rgba(0,0,0,0.3);
-  background-color: #357ae8;
-  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
-}
+     .account{
+       text-align: center;
+     }
 
-.loginmodal-container a {
-  text-decoration: none;
-  color: #666;
-  font-weight: 400;
-  text-align: center;
-  display: inline-block;
-  opacity: 0.6;
-  transition: opacity ease 0.5s;
-}
+     .form-inputs{
+       margin-top: 25px;
+     }
 
-.login-help{
-  font-size: 12px;
-}
+     .form-actions{
+       text-align: center;
+       margin-top: 35px;
+       margin-bottom: 25px;
+
+       .btn-primary{
+         font-size: 16px;
+         letter-spacing: 1px;
+         width: 100%;
+       }
+     }
+ }
