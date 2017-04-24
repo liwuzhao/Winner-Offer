@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <div class="row">
         <div class="col-md-6" style="font-size:20px">
-          <p><%= link_to(job.title,job_path(job)) %></p>
+          <p><%= link_to(render_highlight_content(job,@query_string),job_path(job)) %></p>
         </div>
         <div class="col-md-6">
           <p></p>
