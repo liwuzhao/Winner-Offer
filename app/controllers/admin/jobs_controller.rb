@@ -5,7 +5,7 @@ class Admin::JobsController < ApplicationController
   layout "admin"
 
   def index
-    @jobs = Job.where(:user => current_user).paginate(:page => params[:page], :per_page => 15)
+    @jobs = current_user.jobs.paginate(:page => params[:page], :per_page => 15)
   end
 
 

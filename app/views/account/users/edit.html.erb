@@ -1,12 +1,14 @@
-<br><br>
-<div class="container-fluid">
-  <h2 class="text-center"> 修改个人资料 </h2>
-  <%= simple_form_for [:account, @user] do |f| %>
-  <div class="well" style="border-radius:20px">
-    <%= f.input :email, :label =>"邮箱地址" %>
-    <%= f.input :username, :label =>"用户名" %>
-    <%= link_to("放弃更新", root_path, class: "btn btn-sm btn-default" ) %>
-    <%= f.submit "提交", class: "btn btn-sm btn-default" %>
+<div class="row user_setup">
+  <br><br><br>
+  <div class="col-md-4 col-md-offset-4 user_setup_content">
+    <h2 class="text-center"> 修改个人资料 </h2>
+    <%= simple_form_for [:account, @user] do |f| %>
+    <div>
+      <%= f.input :email, :label =>"邮箱地址" %>
+      <%= f.input :username, :label =>"用户名" %>
+      <%= link_to("放弃更新", root_path, class: "btn btn-sm btn-primary" ) %>
+      <%= f.submit "提交", class: "btn btn-sm btn-primary" %>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
