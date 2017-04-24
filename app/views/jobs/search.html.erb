@@ -1,5 +1,3 @@
-
-
 <br><br><br>
 <div class="container text-center jobs_page_size">
 
@@ -7,8 +5,8 @@
 
 
     <div class="pull-right">
-      <%= link_to(content_tag(:i, " Check All Jobs", class: "fa fa-reply-all"), jobs_path) %> |
-      <%= link_to(content_tag(:i, " Back", class: "fa fa-arrow-left"), url_for(:back)) %>
+      <%= link_to(content_tag(:i, " 查看所有工作", class: "fa fa-reply-all"), jobs_path) %> |
+      <%= link_to(content_tag(:i, " 返回", class: "fa fa-arrow-left"), url_for(:back)) %>
     </div>
 
 
@@ -16,7 +14,7 @@
     <% if @jobs.blank?%>
       <br>
       <div>
-        Opps! No any results matched, please try again.
+        抱歉，没有找到对应的搜索结果，请重新搜索。
       </div>
     <% else %>
       <br>
