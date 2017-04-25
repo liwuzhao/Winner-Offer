@@ -1,37 +1,37 @@
  <div class="col-md-10 col-lg-10 col-lg-offset-1 well" style="border-radius:20px">
       <div class="row">
-          <div class="col-md-6" style="font-size:20px">
+          <div class="col-md-6 col-lg-6" style="font-size:20px">
             <p><%= link_to(job.title,job_path(job)) %></p>
           </div>
       </div>
       <div class="row">
 
-          <div class="col-md-6">
+          <div class="col-md-6 col-lg-6">
             <p><i class="fa fa-jpy fa-md" aria-hidden="true"></i>
             <%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %></p>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 col-lg-6">
             <p><i class="fa fa-address-card-o" aria-hidden="true"></i>  <%= job.category %></p>
           </div>
 
       </div>
       <div class="row">
 
-          <div class="col-md-3">
+          <div class="col-md-3 col-lg-3">
             <%= job.company %>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-3 col-lg-3">
             <i class="fa fa-map-marker fa-md" aria-hidden="true" style="color:rgb(202, 12, 12)" ></i>
             <%= job.location %>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-3 col-lg-3">
             <i class="fa fa-male" aria-hidden="true"></i>
             招聘人数：<%= job.number %>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-3 col-lg-3">
               <i class="fa fa-clock-o" aria-hidden="true"></i>
               <%= time_ago_in_words(job.created_at) %> ago
           </div>
