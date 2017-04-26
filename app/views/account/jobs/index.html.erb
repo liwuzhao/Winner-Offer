@@ -1,13 +1,24 @@
-<!-- 投递过的工作 -->
-<br><br><br>
-<div class="container text-center jobs_page_size">
-
-  <h1 class="text-center" style="font-family:Verdana">已投递的工作</h1><br>
-  <hr>
-
+<!-- 已申请的工作页面 -->
+<div class="col-md-10 col-md-offset-1">
   <br>
-  <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
+  <div class="page-header">
+    <h2 class="text-center">我申请的工作</h2>
+  </div>
+  <table class="table text-center table-striped list">
+    <thead class="font" style="background-color: rgb(150, 214, 230);">
+      <td class="text-left">工作</td>
+      <td>公司</td>
+      <td>工作种类</td>
+      <td>申请人数</td>
+      <td>工资</td>
+      <td>发表时间</td>
+    </thead>
+    <tbody>
+      <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
+    </tbody>
+  </table>
   <div class="text-center">
     <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
   </div>
+
 </div>
