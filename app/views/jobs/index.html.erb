@@ -3,12 +3,12 @@
     <h1 class="text-center" style="font-family:Verdana">工作列表</h1><br>
       <ul class="nav nav-tabs">
         <li style="margin-left:170px;"><%= link_to "所有职位", jobs_path %></li>
-        <li><%= link_to "设计", jobs_path(:category => "设计" ) %></li>
-        <li><%= link_to "销售", jobs_path(:category => "销售" ) %></li>
-        <li><%= link_to "法律", jobs_path(:category => "法律" ) %></li>
-        <li><%= link_to "开发", jobs_path(:category => "开发" ) %></li>
-        <li><%= link_to "人力资源", jobs_path(:category => "人力资源" ) %></li>
-        <li><%= link_to "医护", jobs_path(:category => "医护" ) %></li>
+        <li><%= link_to "设计", jobs_path(:c => "设计" ) %></li>
+        <li><%= link_to "销售", jobs_path(:c => "销售" ) %></li>
+        <li><%= link_to "法律", jobs_path(:c => "法律" ) %></li>
+        <li><%= link_to "开发", jobs_path(:c => "开发" ) %></li>
+        <li><%= link_to "人力资源", jobs_path(:c => "人力资源" ) %></li>
+        <li><%= link_to "医护", jobs_path(:c => "医护" ) %></li>
       </ul>
 
 
@@ -19,9 +19,9 @@
             <span class="caret"></span>
           </button>
           <ul class="reorder dropdown-menu ">
-            <li><%= link_to("按最低薪资排序", jobs_path(:category => @category, :order => "by_lower_bound")) %></li>
-            <li><%= link_to("按最高薪资排序", jobs_path(:category => @category, :order => "by_upper_bound")) %></li>
-            <li><%= link_to("按发表时间排序", jobs_path(:category => @category) ) %></li>
+            <li><%= link_to("按最低薪资排序", jobs_path(:c => @category, :order => "by_lower_bound")) %></li>
+            <li><%= link_to("按最高薪资排序", jobs_path(:c => @category, :order => "by_upper_bound")) %></li>
+            <li><%= link_to("按发表时间排序", jobs_path(:c => @category) ) %></li>
           </ul>
     </div>
 

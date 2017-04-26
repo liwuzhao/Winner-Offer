@@ -9,10 +9,12 @@ class JobsController < ApplicationController
     @jobs = Job.published
 
     # 按职位分类
-    if params[:category].present?
-      @category = params[:category]
+    if params[:c].present?
+      @category = params[:c]
       @jobs = @jobs.where(:category => @category)
     end
+
+    #排序
     @jobs = case params[:order]
             when 'by_lower_bound'
               @jobs.order('wage_lower_bound DESC').paginate(:page => params[:page], :per_page => 10)
@@ -21,8 +23,6 @@ class JobsController < ApplicationController
             else
               @jobs.recent.paginate(:page => params[:page], :per_page => 10)
             end
-
-    #排序
 
 
   end
