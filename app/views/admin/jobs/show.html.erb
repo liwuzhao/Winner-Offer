@@ -39,7 +39,7 @@
                   <p><i class="fa fa-envelope" aria-hidden="true"></i> <strong><%= @job.contact_email %></strong></p>
               </div>
               <div class="col-md-4">
-                  <p><span><i class="fa fa-clock-o" aria-hidden="true"></i> <%= time_ago_in_words(@job.created_at) %> ago</span><br></p>
+                <p><span><i class="fa fa-clock-o" aria-hidden="true"></i> <%= @job.created_at.strftime("%Y-%m-%d") %> </span><br></p>
               </div>
           </div>
 
