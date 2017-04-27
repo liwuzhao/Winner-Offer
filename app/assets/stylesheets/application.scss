@@ -21,6 +21,9 @@
  @import "font-awesome";
  @import url(http://fonts.googleapis.com/css?family=Roboto);
 
+
+ // -------- myself ---------
+
  .sidebar {
   display: none;
   position: fixed;
@@ -87,8 +90,6 @@
     }
   }
 }
-
- // -------- myself ---------
 
  #trip1 {
      transition: box-shadow 0.7s;
@@ -319,7 +320,6 @@
   text-align: center;
   top: 20px;
   background-color: rgb(229,229,229);
-  margin-top: -20px; //temp
  }
  .caption2 {
   text-align: center;

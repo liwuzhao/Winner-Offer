@@ -1,218 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
+<head>
 
   <head>
-
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="">
-      <meta name="author" content="">
-
-      <title>Winner Offer</title>
-
-      <!-- Bootstrap Core CSS -->
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-
-      <!-- Custom CSS -->
-      <link href="css/full-slider.css" rel="stylesheet">
-
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
-
   </head>
 
-  <body>
-      <div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <div class="jumbotron">
-                <div class="main-heading title">
-                  <h1 data-animation="animated zoomInRight">Winner</h1>
-                </div>
+</head>
 
-                <br><br>
-                <p class="lead" data-animation="animated fadeInLeft"><a class="btn btn-lg btn-button" href="/jobs">立刻应聘</a></p>
-              </div>
-            </div>
+<div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line row" data-ride="carousel" data-pause="hover" data-interval="5000" >
+  <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div class="jumbotron">
+          <div class="main-heading title">
+            <h1 data-animation="animated zoomInRight">Winner</h1>
+          </div>
+
+          <br><br>
+          <p class="lead" data-animation="animated fadeInLeft"><a class="btn btn-lg btn-button" href="/jobs">立刻应聘</a></p>
         </div>
       </div>
+  </div>
+</div>
 
 
-      <!-- section1 -->
-      <section>
-          <div class="container-fluid text-center row caption1">
-            <br><br>
-            <h1>关于我们</h1>
-            <hr style="width:120px;">
-            <div class="row">
-              <div id="trip1" class="col-sm-4 thumbnail">
-                <h3><strong>高效</strong></h3><br>
-                <p><i class="fa fa-rocket fa-5x" aria-hidden="true"></i></p>
-                <p>第一时间将你的简历送达</p>
-              </div>
-              <div id="trip1" class="col-sm-4 thumbnail">
-                <h3><strong>有干货</strong></h3><br>
-                <p><i class="fa fa-building fa-5x" aria-hidden="true"></i></p>
-                <p>我们提供大量优质的工作岗位</p>
-              </div>
-              <div id="trip1" class="col-sm-4 thumbnail">
-                <h3><strong>简便</strong></h3><br>
-                <p><i class="fa fa-hand-o-up fa-5x" aria-hidden="true"></i></p>
-                <p>提交简历只需一步</p>
-              </div>
+<!-- section1 -->
+<section>
+  <div class="container-fluid text-center row caption1">
+    <br><br>
+    <h1>关于我们</h1>
+    <hr style="width:120px;">
+    <div class="row">
+      <div id="trip1" class="col-md-4 thumbnail">
+        <h3><strong>高效</strong></h3><br>
+        <p><i class="fa fa-rocket fa-5x" aria-hidden="true"></i></p>
+        <p>第一时间将你的简历送达</p>
+      </div>
+      <div id="trip1" class="col-md-4 thumbnail">
+        <h3><strong>有干货</strong></h3><br>
+        <p><i class="fa fa-building fa-5x" aria-hidden="true"></i></p>
+        <p>我们提供大量优质的工作岗位</p>
+      </div>
+      <div id="trip1" class="col-md-4 thumbnail">
+        <h3><strong>简便</strong></h3><br>
+        <p><i class="fa fa-hand-o-up fa-5x" aria-hidden="true"></i></p>
+        <p>提交简历只需一步</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- section2 -->
+<section>
+  <br>
+  <div class="container-fluid text-center">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <h2 class="section-title">热门岗位</h2>
+                <hr style="width:120px;">
             </div>
-          </div>
-      </section>
-
-
-      <!-- section2 -->
-      <section>
-          <br>
-          <div class="container-fluid text-center">
-            <div class="col-md-8 col-md-offset-2">
+        </div>
+          <div class="col-md-12">
               <div class="row">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 text-center">
-                        <h2 class="section-title">热门岗位</h2>
-                        <hr style="width:120px;">
-                    </div>
-                </div>
-                  <div class="col-md-12">
-                      <div class="row">
-                          <div class="col-md-4">
+                  <div class="col-md-4">
 
-                              <div class="expert-box">
-                                <%= link_to jobs_path(:category => "开发" ) do %>
-                                  <%= image_tag("computer.png", :class => "img-welcome img-circle", :id => "trip1" )%>
-                                <% end %>
-                              </div>
-                              <div>
-                                <h3> 开发</h3>
-                              </div>
-                          </div>
-
-                          <div class="col-md-4">
-                              <div class="expert-box">
-                                <%= link_to jobs_path(:category => "医护" ) do %>
-                                  <%= image_tag("doctor.png", :class => "img-welcome img-circle", :id => "trip1")  %>
-                                <% end %>
-                              </div>
-                              <div>
-                                <h3> 医护人员</h3>
-                              </div>
-                          </div>
-
-                          <div class="col-md-4">
-                              <div class="expert-box">
-                                <%= link_to jobs_path(:category => "人力资源" ) do %>
-                                  <%= image_tag("human-resources.png", :class => "img-welcome img-circle", :id => "trip1") %>
-                                <% end %>
-                              </div>
-                              <div>
-                                <h3> 人力资源</h3><br>
-                              </div>
-                          </div>
-
-                          <div class="col-md-4">
-                              <div class="expert-box">
-                                <%= link_to jobs_path(:category => "设计" ) do %>
-                                  <%= image_tag("pen.png", :class => "img-welcome img-circle", :id => "trip1") %>
-                                <% end %>
-                              </div>
-                              <div>
-                                <h3>设计</h3>
-                              </div>
-                          </div>
-
-                          <div class="col-md-4">
-                              <div class="expert-box">
-                                <%= link_to jobs_path(:category => "销售" ) do %>
-                                  <%= image_tag("sale.png", :class => "img-welcome img-circle", :id => "trip1") %>
-                                <% end %>
-                              </div>
-                              <div>
-                                <h3>销售</h3>
-                              </div>
-                          </div>
-
-                          <div class="col-md-4">
-                              <div class="expert-box">
-                                <%= link_to jobs_path(:category => "法律" ) do %>
-                                  <%= image_tag("balance.png", :class => "img-welcome img-circle", :id => "trip1") %>
-                                <% end %>
-                              </div>
-                              <div>
-                                <h3>法律从业</h3>
-                              </div>
-                          </div>
-
+                      <div class="expert-box">
+                        <%= link_to jobs_path(:category => "开发" ) do %>
+                          <%= image_tag("computer.png", :class => "img-welcome img-circle", :id => "trip1" )%>
+                        <% end %>
                       </div>
-                      <br><br><br>
+                      <div>
+                        <h3> 开发</h3>
+                      </div>
                   </div>
-                </div>
+
+                  <div class="col-md-4">
+                      <div class="expert-box">
+                        <%= link_to jobs_path(:category => "医护" ) do %>
+                          <%= image_tag("doctor.png", :class => "img-welcome img-circle", :id => "trip1")  %>
+                        <% end %>
+                      </div>
+                      <div>
+                        <h3> 医护人员</h3>
+                      </div>
+                  </div>
+
+                  <div class="col-md-4">
+                      <div class="expert-box">
+                        <%= link_to jobs_path(:category => "人力资源" ) do %>
+                          <%= image_tag("human-resources.png", :class => "img-welcome img-circle", :id => "trip1") %>
+                        <% end %>
+                      </div>
+                      <div>
+                        <h3> 人力资源</h3><br>
+                      </div>
+                  </div>
+
+                  <div class="col-md-4">
+                      <div class="expert-box">
+                        <%= link_to jobs_path(:category => "设计" ) do %>
+                          <%= image_tag("pen.png", :class => "img-welcome img-circle", :id => "trip1") %>
+                        <% end %>
+                      </div>
+                      <div>
+                        <h3>设计</h3>
+                      </div>
+                  </div>
+
+                  <div class="col-md-4">
+                      <div class="expert-box">
+                        <%= link_to jobs_path(:category => "销售" ) do %>
+                          <%= image_tag("sale.png", :class => "img-welcome img-circle", :id => "trip1") %>
+                        <% end %>
+                      </div>
+                      <div>
+                        <h3>销售</h3>
+                      </div>
+                  </div>
+
+                  <div class="col-md-4">
+                      <div class="expert-box">
+                        <%= link_to jobs_path(:category => "法律" ) do %>
+                          <%= image_tag("balance.png", :class => "img-welcome img-circle", :id => "trip1") %>
+                        <% end %>
+                      </div>
+                      <div>
+                        <h3>法律从业</h3>
+                      </div>
+                  </div>
+
               </div>
+              <br><br><br>
           </div>
-      </section>
-
-
-      <div id="sidebar" class="sidebar">
-        <ul>
-          <li class="backtop"><i class="fa fa-arrow-circle-up"></i></li>
-          <li class="support">
-            <i class="fa fa-thumbs-o-up"></i>
-            <div class="ewm">
-              <p>
-                觉得不错嘛？<br>
-                来，动动小手<br>
-                <a href="https://fullstack.xinshengdaxue.com/works/312" target="_blank">帮我投个票</a><br>
-                谢谢^_^
-              </p>
-            </div>
-          </li>
-        </ul>
+        </div>
       </div>
+  </div>
+</section>
 
-      <div id="sidebar" class="sidebar">
-        <ul>
-          <li class="backtop"><i class="fa fa-arrow-circle-up"></i></li>
-          <li class="support">
-            <i class="fa fa-thumbs-o-up"></i>
-            <div class="ewm">
-              <p>
-                觉得不错嘛？<br>
-                来，动动小手<br>
-                <a href="https://fullstack.xinshengdaxue.com/works/312" target="_blank">帮我投个票</a><br>
-                谢谢^_^
-              </p>
-            </div>
-          </li>
-        </ul>
+
+<div id="sidebar" class="sidebar">
+  <ul>
+    <li class="backtop"><i class="fa fa-arrow-circle-up"></i></li>
+    <li class="support">
+      <i class="fa fa-thumbs-o-up"></i>
+      <div class="ewm">
+        <p>
+          如果喜欢本网站<br>
+          <a href="https://fullstack.xinshengdaxue.com/works/304" target="_blank">请帮我投个票</a><br>
+        </p>
       </div>
+    </li>
+  </ul>
+</div>
 
-        <!-- jQuery -->
-        <script src="js/jquery.js"></script>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+<!-- Script to Activate the Carousel -->
+<script>
+  $('.carousel').carousel({
+      interval: 5000 //changes the speed
+  })
+  $('#bootstrap-touch-slider').bsTouchSlider();
+</script>
 
-        <!-- Script to Activate the Carousel -->
-        <script>
-        $('.carousel').carousel({
-            interval: 5000 //changes the speed
-        })
-        $('#bootstrap-touch-slider').bsTouchSlider();
-        </script>
-
-       <script>
-          $(document).ready(function () {
-          $('.material-button-toggle').click(function () {
-              $(this).toggleClass('open');
-              $('.option').toggleClass('scale-on');
-          });
-         });
-        </script>
-
-  </body>
-
-</html>
+<script>
+  $(document).ready(function () {
+  $('.material-button-toggle').click(function () {
+      $(this).toggleClass('open');
+      $('.option').toggleClass('scale-on');
+  });
+  });
+</script>
