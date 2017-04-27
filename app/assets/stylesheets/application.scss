@@ -14,12 +14,23 @@
  *= require_self
  *= require font-awesome
  */
+ $nav-color-gray: #A6A6A6;
+ $nav-color-white: #fff;
+ $nav-color-black: #A6A6A6;
+ $nav-background-black: #323436;
+ $nav-a-hover: #353637;
+ $banner-color: #fff;
+ $btn-color: #fff;
+ $btn-background: #49BCB5;
+ $btn-background-hover: #00DBE9;
 
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
  @import url(http://fonts.googleapis.com/css?family=Roboto);
+
+
 
 
  // -------- myself ---------
@@ -337,11 +348,8 @@
 
 
 
-// -------------Navbar-------------
+ // -------------Navbar-------------
 
-  .navbar {
-      backgound: transparent;
-  }
 
  .navbar-default {
      background-color: #212121;  //背景颜色
@@ -405,6 +413,8 @@
      width: 25px; //定制图片宽度
      height: 25px; //定制图片高度
  }
+
+
 
 
 
