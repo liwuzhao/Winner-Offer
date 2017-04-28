@@ -14,15 +14,7 @@
  *= require_self
  *= require font-awesome
  */
- $nav-color-gray: #A6A6A6;
- $nav-color-white: #fff;
- $nav-color-black: #A6A6A6;
- $nav-background-black: #323436;
- $nav-a-hover: #353637;
- $banner-color: #fff;
- $btn-color: #fff;
- $btn-background: #49BCB5;
- $btn-background-hover: #00DBE9;
+
 
 
  @import "bootstrap-sprockets";
@@ -34,6 +26,11 @@
 
 
  // -------- myself ---------
+
+ // temp
+  .fix{
+    margin-right: 15px;
+  }
 
  .sidebar {
   display: none;
@@ -262,9 +259,10 @@
 
  //------ footer -------
 
+
+
  html{
    height:100%;
-   max-width: 100%;
  }
  body{
    min-height:100%;
@@ -275,7 +273,6 @@
 
  main{
    padding-bottom:100px;/* main的padding-bottom值要等于或大于footer的height值 */
-   background-color: #bdb76b;
  }
 
  footer{
@@ -289,7 +286,7 @@
 
 
  footer .footer-below {
-     margin-top: 50px;
+     margin-top: 25px;
      padding: 25px 0;
      background-color: rgb(34,34,34);
  }
@@ -331,6 +328,7 @@
  .caption1 {
   text-align: center;
   top: 20px;
+  padding-bottom: 40px;
   background-color: rgb(229,229,229);
  }
  .caption2 {
@@ -436,7 +434,9 @@
  /*===== user ====*/
  .user_setup{
      height: 770px;
-     background: image_url("back_in_user.jpg") no-repeat scroll top center/ cover;
+     background-image: image-url("back_in_user.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
      margin-bottom: -150px;
  }
 

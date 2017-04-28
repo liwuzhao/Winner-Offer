@@ -2,6 +2,46 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+//---------welcome---------
+ .container-fluid .jumbotron{
+   padding-bottom: 250px;//内部的底部边距，这样按钮不会很靠近底部了
+   margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+   border-radius: 0;//圆角为0
+ }
+  .jumbotron {
+    background-image: image-url("header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .main-heading {
+    font-family: 'Open sans', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    color: rgb(238,238,238);
+    text-align: center;
+    margin-top: 280px;
+  }
+
+  .slogan {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: "Microsoft Yahei", 微软雅黑;
+    text-align: center;
+    color: rgb(2,2,2);//字体颜色
+  }
+
+  .lead {
+    margin-bottom: 60px;
+    text-align: center;
+    color: white;
+  }
+
+
+
 .short-line {
     display: block;
     background: #35CCC6;
@@ -17,10 +57,10 @@
     position: relative;
 }
 
-.support{
+.bottom{
     text-align: center;
     height: 200px;
-    background: image_url("buttom.jpg") no-repeat scroll top center/ cover;
+    background: image_url("bottom.png") no-repeat scroll top center/ cover;
 
     div{
       margin-top: 15px;
@@ -377,44 +417,3 @@
     }
 
 }
-
-
-
-
-
-//---------welcome---------
- .container-fluid .jumbotron{
-   padding-bottom: 250px;//内部的底部边距，这样按钮不会很靠近底部了
-   margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
-   border-radius: 0;//圆角为0
- }
-  .jumbotron {
-    background-image: image-url("header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .main-heading {
-    font-family: 'Open sans', sans-serif;
-    font-weight: 300;
-    text-align: center;
-    letter-spacing: 9px;
-    text-transform: uppercase;
-    color: rgb(238,238,238);
-    text-align: center;
-    margin-top: 280px;
-  }
-
-  .slogan {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-family: "Microsoft Yahei", 微软雅黑;
-    text-align: center;
-    color: rgb(2,2,2);//字体颜色
-  }
-
-  .lead {
-    margin-bottom: 60px;
-    text-align: center;
-    color: white;
-  }
