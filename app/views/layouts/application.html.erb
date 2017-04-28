@@ -15,7 +15,7 @@
 
         <div class="container-fluid main">
 
-          <div class="row navbar_fix">
+          <div class="navbar_fix">
             <%= render "common/navbar" %>
           </div>
 
@@ -23,13 +23,9 @@
             <%= render "common/flashes" %>
           </div>
 
-          <div class="row">
-            <%= yield %>
-          </div>
+          <%= yield %>
 
-          <div class="row">
-            <%= render "common/footer" %>
-          </div>
+          <%= render "common/footer" %>
 
 
         </div>

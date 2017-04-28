@@ -2,7 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// text
+.short-line {
+    display: block;
+    background: #35CCC6;
+    border-style: none;
+    border-radius: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    z-index: 53;
+    width: 100px;
+    height: 1.5px;
+    position: relative;
+}
+
+.support{
+    text-align: center;
+    height: 200px;
+    background: image_url("buttom.jpg") no-repeat scroll top center/ cover;
+
+    div{
+      margin-top: 15px;
+    }
+}
 
 .bs-slider{
     overflow: hidden;
