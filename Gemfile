@@ -44,6 +44,8 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'ransack'
 gem 'seo_helper','~> 1.0'
+gem 'annotate'
+
 
 
 group :development do
