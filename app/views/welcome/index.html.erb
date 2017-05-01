@@ -22,158 +22,150 @@
   </div>
 </div>
 
-
-<!-- section1 -->
-<section>
-  <div class="container-fluid text-center row caption1">
-    <br><br>
-    <h1>关于我们</h1>
-    <div class="short-line"></div>
-    <div class="row">
-      <div id="trip1" class="col-md-4">
-        <h3><strong>高效</strong></h3><br>
-        <p><i class="fa fa-rocket fa-5x" aria-hidden="true"></i></p>
-        <p>第一时间将你的简历送达</p>
-      </div>
-      <div id="trip1" class="col-md-4">
-        <h3><strong>有干货</strong></h3><br>
-        <p><i class="fa fa-building fa-5x" aria-hidden="true"></i></p>
-        <p>我们提供大量优质的工作岗位</p>
-      </div>
-      <div id="trip1" class="col-md-4">
-        <h3><strong>简便</strong></h3><br>
-        <p><i class="fa fa-hand-o-up fa-5x" aria-hidden="true"></i></p>
-        <p>提交简历只需一步</p>
-      </div>
+<!-- 关于我们 -->
+<div id="about-us" class="container-fluid text-center row caption1">
+  <br><br>
+  <h1>关于我们</h1>
+  <div class="short-line"></div>
+  <div class="row">
+    <div id="trip1" class="col-md-4">
+      <h3><strong>高效</strong></h3><br>
+      <p><i class="fa fa-rocket fa-5x" aria-hidden="true"></i></p>
+      <p>第一时间将你的简历送达</p>
+    </div>
+    <div id="trip1" class="col-md-4">
+      <h3><strong>有干货</strong></h3><br>
+      <p><i class="fa fa-building fa-5x" aria-hidden="true"></i></p>
+      <p>我们提供大量优质的工作岗位</p>
+    </div>
+    <div id="trip1" class="col-md-4">
+      <h3><strong>简便</strong></h3><br>
+      <p><i class="fa fa-hand-o-up fa-5x" aria-hidden="true"></i></p>
+      <p>提交简历只需一步</p>
     </div>
   </div>
-</section>
+</div>
 
 
-<!-- section2 -->
-<section>
-  <br>
-  <div class="container-fluid text-center">
-    <div class="col-md-8 col-md-offset-2">
+<!-- 热门岗位 -->
+<div id="hot-jobs" class="container-fluid text-center">
+  <br><br>
+  <div class="col-md-8 col-md-offset-2">
+    <div class="row">
       <div class="row">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-                <h2 class="section-title">热门岗位</h2>
-                <div class="short-line"></div>
-            </div>
-        </div>
-          <div class="col-md-12">
-              <div class="row">
-                  <div class="col-md-4">
-                      <div class="expert-box">
-                        <%= link_to jobs_path(:category => "开发" ) do %>
-                          <%= image_tag("computer.png", :class => "img-welcome img-circle", :id => "trip1" )%>
-                        <% end %>
-                      </div>
-                      <div>
-                        <h3> 开发</h3>
-                      </div>
-                  </div>
-
-                  <div class="col-md-4">
-                      <div class="expert-box">
-                        <%= link_to jobs_path(:category => "医护" ) do %>
-                          <%= image_tag("doctor.png", :class => "img-welcome img-circle", :id => "trip1")  %>
-                        <% end %>
-                      </div>
-                      <div>
-                        <h3> 医护人员</h3>
-                      </div>
-                  </div>
-
-                  <div class="col-md-4">
-                      <div class="expert-box">
-                        <%= link_to jobs_path(:category => "人力资源" ) do %>
-                          <%= image_tag("human-resources.png", :class => "img-welcome img-circle", :id => "trip1") %>
-                        <% end %>
-                      </div>
-                      <div>
-                        <h3> 人力资源</h3><br>
-                      </div>
-                  </div>
-
-                  <div class="col-md-4">
-                      <div class="expert-box">
-                        <%= link_to jobs_path(:category => "设计" ) do %>
-                          <%= image_tag("pen.png", :class => "img-welcome img-circle", :id => "trip1") %>
-                        <% end %>
-                      </div>
-                      <div>
-                        <h3>设计</h3>
-                      </div>
-                  </div>
-
-                  <div class="col-md-4">
-                      <div class="expert-box">
-                        <%= link_to jobs_path(:category => "销售" ) do %>
-                          <%= image_tag("sale.png", :class => "img-welcome img-circle", :id => "trip1") %>
-                        <% end %>
-                      </div>
-                      <div>
-                        <h3>销售</h3>
-                      </div>
-                  </div>
-
-                  <div class="col-md-4">
-                      <div class="expert-box">
-                        <%= link_to jobs_path(:category => "法律" ) do %>
-                          <%= image_tag("balance.png", :class => "img-welcome img-circle", :id => "trip1") %>
-                        <% end %>
-                      </div>
-                      <div>
-                        <h3>法律从业</h3>
-                      </div>
-                  </div>
-
-              </div>
-              <br><br><br>
+          <div class="col-md-6 col-md-offset-3 text-center">
+              <h2 class="section-title">热门岗位</h2>
+              <div class="short-line"></div>
           </div>
+      </div>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="expert-box">
+                      <%= link_to jobs_path(:category => "开发" ) do %>
+                        <%= image_tag("computer.png", :class => "img-welcome img-circle", :id => "trip1" )%>
+                      <% end %>
+                    </div>
+                    <div>
+                      <h3> 开发</h3>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="expert-box">
+                      <%= link_to jobs_path(:category => "医护" ) do %>
+                        <%= image_tag("doctor.png", :class => "img-welcome img-circle", :id => "trip1")  %>
+                      <% end %>
+                    </div>
+                    <div>
+                      <h3> 医护人员</h3>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="expert-box">
+                      <%= link_to jobs_path(:category => "人力资源" ) do %>
+                        <%= image_tag("human-resources.png", :class => "img-welcome img-circle", :id => "trip1") %>
+                      <% end %>
+                    </div>
+                    <div>
+                      <h3> 人力资源</h3><br>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="expert-box">
+                      <%= link_to jobs_path(:category => "设计" ) do %>
+                        <%= image_tag("pen.png", :class => "img-welcome img-circle", :id => "trip1") %>
+                      <% end %>
+                    </div>
+                    <div>
+                      <h3>设计</h3>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="expert-box">
+                      <%= link_to jobs_path(:category => "销售" ) do %>
+                        <%= image_tag("sale.png", :class => "img-welcome img-circle", :id => "trip1") %>
+                      <% end %>
+                    </div>
+                    <div>
+                      <h3>销售</h3>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="expert-box">
+                      <%= link_to jobs_path(:category => "法律" ) do %>
+                        <%= image_tag("balance.png", :class => "img-welcome img-circle", :id => "trip1") %>
+                      <% end %>
+                    </div>
+                    <div>
+                      <h3>法律从业</h3>
+                    </div>
+                </div>
+
+            </div>
+            <br><br><br>
         </div>
       </div>
-  </div>
-</section>
+    </div>
+</div>
 
 
 <!-- 用户反馈 -->
-<section>
-  <div >
-    <div class="container-fluid text-center row caption1 bg-1">
-      <h3 class="text-center">用户反馈</h3>
-      <div class="short-line"></div>
-      <p class="text-center">听听他们在Winner Offer收获了什么</p><br><br>
+<div id="feedback" class="container-fluid text-center row caption1 bg-1">
+  <br>
+  <h3 class="text-center">用户反馈</h3>
+  <div class="short-line"></div>
+  <p class="text-center">听听他们在Winner Offer收获了什么</p><br><br>
 
 
-      <div class="row text-center">
-        <div class="col-sm-4">
-          <div class="">
-            <%= image_tag("user1.png", :class => "img-welcome img-circle", :id => "trip1")  %>
-            <p><strong>Stephen</strong></p>
-            <p>在这里找到一份合适自己的工作，更容易成为Winner！</p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="">
-            <%= image_tag("user2.png", :class => "img-welcome img-circle", :id => "trip1")  %>
-            <p><strong>Cathy</strong></p>
-            <p>在Winner Offer招聘，总是能找到合适的人才</p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="">
-            <%= image_tag("user3.png", :class => "img-welcome img-circle", :id => "trip1")  %>
-            <p><strong>Tomas</strong></p>
-            <p>职位多、质量高，是我选择Winner Offer的原因</p>
-          </div>
-        </div>
+  <div class="row text-center">
+    <div class="col-sm-4">
+      <div class="">
+        <%= image_tag("user1.png", :class => "img-welcome img-circle", :id => "trip1")  %>
+        <p><strong>Stephen</strong></p>
+        <p>在这里找到一份合适自己的工作，更容易成为Winner！</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="">
+        <%= image_tag("user2.png", :class => "img-welcome img-circle", :id => "trip1")  %>
+        <p><strong>Cathy</strong></p>
+        <p>在Winner Offer招聘，总是能找到合适的人才</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="">
+        <%= image_tag("user3.png", :class => "img-welcome img-circle", :id => "trip1")  %>
+        <p><strong>Tomas</strong></p>
+        <p>职位多、质量高，是我选择Winner Offer的原因</p>
       </div>
     </div>
   </div>
-</section>
+</div>
 
 
 

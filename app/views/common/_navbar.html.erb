@@ -1,47 +1,56 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" >
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' >Winner&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <a class="navbar-brand" href="/jobs">工作</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <% if !current_user %>
-                <li><%= link_to("注册", new_user_registration_path) %></li>
-                <li><%= link_to("登录", new_user_session_path) %></li>
-              <% else %>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>
-                        你好，<%= current_user.display_name %>
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <% if current_user.admin? %>
-                          <li><%= link_to("<span class='fa fa-home fa-lg'></span>管理员面板".html_safe, admin_jobs_path) %></li>
-                          <li><%= link_to("<span class='fa fa-file-text fa-fa-2x'></span>  投递历史".html_safe, account_jobs_path) %></li>
-                      <% end %>
-                          <li><%= link_to("<span class='fa fa-heart fa-fa-lg'></span> 我的收藏".html_safe, account_jobfs_path) %></li>
-                          <li><%= link_to("<span class='fa fa-database fa-fa-2x'></span>  个人中心".html_safe, edit_account_user_path(current_user) )%></li>
-                          <li class="divider"> </li>
-                          <li><%= link_to("<span class='fa fa-sign-out fa-lg'></span> 退出".html_safe, destroy_user_session_path,  method: :delete) %></li>
-                    </ul>
-                </li>
-              <% end %>
-            </ul>
+  <div class="container">
 
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                  <div class="form-group form-inline search-bar">
-                      <%= render :partial => "jobs/search_bar"  %>
-                  </div>
-              </li>
-            </ul>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' >Winner&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <!-- <a class="navbar-brand" href="/jobs">工作</a> -->
 
-        </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container-fluid -->
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#about-us">关于我们</a></li>
+        <li><a href="#hot-jobs">热门岗位</a></li>
+        <li><a href="#feedback">用户反馈</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <% if !current_user %>
+          <li><%= link_to("注册", new_user_registration_path) %></li>
+          <li><%= link_to("登录", new_user_session_path) %></li>
+        <% else %>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>
+                  你好，<%= current_user.display_name %>
+                  <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <% if current_user.admin? %>
+                    <li><%= link_to("<span class='fa fa-home fa-lg'></span>管理员面板".html_safe, admin_jobs_path) %></li>
+                    <li><%= link_to("<span class='fa fa-file-text fa-fa-2x'></span>  投递历史".html_safe, account_jobs_path) %></li>
+                <% end %>
+                    <li><%= link_to("<span class='fa fa-heart fa-fa-lg'></span> 我的收藏".html_safe, account_jobfs_path) %></li>
+                    <li><%= link_to("<span class='fa fa-database fa-fa-2x'></span>  个人中心".html_safe, edit_account_user_path(current_user) )%></li>
+                    <li class="divider"> </li>
+                    <li><%= link_to("<span class='fa fa-sign-out fa-lg'></span> 退出".html_safe, destroy_user_session_path,  method: :delete) %></li>
+              </ul>
+          </li>
+        <% end %>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+            <div class="form-group form-inline search-bar">
+                <%= render :partial => "jobs/search_bar"  %>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
