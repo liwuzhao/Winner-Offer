@@ -20,17 +20,30 @@
               <%= render "common/flashes" %>
             </div>
             <br>
+
             <div class="col-md-2">
+
               <ul class="nav nav-pills nav-stacked" style="max-width: 300px; padding-top:20px;">
-                 <li class="active"><%= link_to("管理者面板", admin_jobs_path ) %> </li>
+                <div class = "button-wrap">
+                  <%= link_to admin_jobs_path do%><button class = "rad-button wwt">管理者面板</button><% end %>
+                </div>
               </ul>
+
               <ul class="nav nav-pills nav-stacked" style="max-width: 300px; padding-top:20px;">
-                 <li class="active"><%= link_to("招聘信息", jobs_path ) %> </li>
+                <div class = "button-wrap">
+                  <%= link_to jobs_path  do%><button class = "rad-button wwt">招聘信息</button><% end %>
+                </div>
               </ul>
+
               <ul class="nav nav-pills nav-stacked" style="max-width: 300px; padding-top:20px;">
-                 <li class="active"><%= link_to("发布职缺", new_admin_job_path ) %> </li>
+                <div class = "button-wrap">
+                  <%= link_to admin_jobs_path do%><button class = "rad-button wwt">管理者面板</button><% end %>
+                </div>
               </ul>
+
             </div>
+
+
 
             <div class="col-md-10">
               <%= yield %>
