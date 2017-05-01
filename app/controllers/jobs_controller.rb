@@ -38,20 +38,20 @@ class JobsController < ApplicationController
   end
 
   def join
-      @job = Job.find(params[:id])
+    @job = Job.find(params[:id])
 
-      if !current_user
-        redirect_to job_path(@job)
-        flash[:warning] = "你需要先登录账号"
-      elsif !current_user.is_member_of?(@job)
-        current_user.join!(@job)
-        flash[:notice] = "收藏成功"
-        redirect_to job_path(@job)
-      else
-        flash[:warning] = "你已经收藏这个岗位了！"
-        redirect_to job_path(@job)
-      end
+    if !current_user
+      redirect_to job_path(@job)
+      flash[:warning] = "你需要先登录账号"
+    elsif !current_user.is_member_of?(@job)
+      current_user.join!(@job)
+      flash[:notice] = "收藏成功"
+      redirect_to job_path(@job)
+    else
+      flash[:warning] = "你已经收藏这个岗位了！"
+      redirect_to job_path(@job)
     end
+  end
 
 
 

@@ -1,4 +1,24 @@
-  <h2> <%= @job.title %> - 履历列表 </h2>
+  <!-- <h2> <%= @job.title %> - 履历列表 </h2>
 
   <hr>
-  <%= render :partial => "resume", :collection => @resumes, :as => :resume %>
+  <% if @resumes.length > 0 %>
+    <%= render :partial => "resume", :collection => @resumes, :as => :resume %>
+  <% else %>
+    <h2 class="no-job-data">此职缺还没有人投过简历哦。 <span class="fa fa-frown-o"></span></h2>
+  <% end %> -->
+
+  <div class="col-md-12 job-form">
+    <% if @resumes.length > 0 %>
+    <div class="col-md-10 col-md-offset-1 resume-form">
+      <h2> <%= @job.title %> - 简历列表 </h2>
+      <hr>
+      <%= render :partial => "resume", :collection => @resumes, :as => :resume %>
+    </div>
+    <div class="col-md-12 job-bottom">
+      <div class="text-center">
+        <%= will_paginate @resumes, renderer: BootstrapPagination::Rails %>
+      </div>
+    </div>
+    <% else %>
+    <h2 class="no-job-data">此职缺还没有人投过简历哦。 <span class="fa fa-frown-o"></span></h2>
+    <% end %>
