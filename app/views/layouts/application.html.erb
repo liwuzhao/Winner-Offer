@@ -12,34 +12,36 @@
     </head>
 
     <body>
-        <div class="container-fluid main">
-          <div class="row navbar_fix">
-            <%= render "common/navbar" %>
-          </div>
-          <div class="row flash">
-            <%= render "common/flashes" %>
-          </div>
-          <div class="row">
-            <%= yield %>
-          </div>
+      <div class="container-fluid">
+
+        <div class="row navbar_fix">
+          <%= render "common/navbar" %>
         </div>
 
-      <div id="sidebar" class="sidebar">
-        <ul>
-          <li class="backtop"><i class="fa fa-arrow-circle-up"></i></li>
-          <li class="support">
-            <i class="fa fa-thumbs-o-up"></i>
-            <div class="ewm">
-              <p>
-                如果喜欢本网站<br>
-                <a href="https://fullstack.xinshengdaxue.com/works/304" target="_blank">请帮我投个票</a><br>
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <%= render "common/footer" %>
+        <div class="row flash">
+          <%= render "common/flashes" %>
+        </div>
 
+        <%= yield %>
+
+        <div id="sidebar" class="sidebar">
+          <ul>
+            <li class="backtop"><i class="fa fa-arrow-circle-up"></i></li>
+            <li class="support">
+              <i class="fa fa-thumbs-o-up"></i>
+              <div class="ewm">
+                <p>
+                  如果喜欢本网站<br>
+                  <a href="https://fullstack.xinshengdaxue.com/works/304" target="_blank">请帮我投个票</a><br>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <%= render "common/footer" %>
 
     </body>
 </html>
