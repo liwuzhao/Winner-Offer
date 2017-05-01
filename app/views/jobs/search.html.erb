@@ -1,15 +1,10 @@
-<br><br><br>
-<div class="container text-center jobs_page_size">
-
-  <h1 class="text-center" style="font-family:Verdana">工作列表</h1><br>
-
-
+<div class="container-fluid jobs-show-page">
+  <h1 class="text-center" style="font-family:Verdana">搜索结果</h1><br>
+  <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
     <div class="pull-right">
       <%= link_to(content_tag(:i, " 查看所有工作", class: "fa fa-reply-all"), jobs_path) %> |
       <%= link_to(content_tag(:i, " 返回", class: "fa fa-arrow-left"), url_for(:back)) %>
     </div>
-
-
     <br>
     <% if @jobs.blank?%>
       <br>
@@ -18,10 +13,11 @@
       </div>
     <% else %>
       <br>
-
-      <%= render :partial => "search_jobs_item", :collection => @jobs, :as => :job %>
+      <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
       <div class="text-center">
         <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
       </div>
     <% end %>
+  </div>
+
 </div>

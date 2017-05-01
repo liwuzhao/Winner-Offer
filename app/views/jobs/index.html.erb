@@ -24,14 +24,11 @@
             <li><%= link_to("按发表时间排序", jobs_path(:c => @category) ) %></li>
           </ul>
     </div>
-
-    <br>
-
     <br><br><br>
-      <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
-      <div class="text-center">
-        <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
-      </div>
+    <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
+    <div class="text-center">
+      <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+    </div>
 
   </div>
 </div>
