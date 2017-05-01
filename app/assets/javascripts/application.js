@@ -18,6 +18,11 @@
 //= require bootstrap/modal
 //= require bootstrap-sprockets
 //= require_tree .
+
+
+
+
+// top和点赞
 $(document).on('click', '.working', function () {
  alert('功能暂未完成，敬请期待...')
  // return false
@@ -31,6 +36,7 @@ $(document).on('click', '.working', function () {
  })
 })
 
+// 
 $(window).scroll(function () {
  var $navbar = $('#navbar')
  if ($(this).scrollTop() > 100) {
