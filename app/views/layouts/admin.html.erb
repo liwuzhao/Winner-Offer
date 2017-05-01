@@ -6,7 +6,6 @@
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/images/logo.png">
 
     </head>
@@ -20,9 +19,7 @@
               <%= render "common/flashes" %>
             </div>
             <br>
-
-            <div class="col-md-2">
-
+            <div class="col-md-2 col-xs-12">
               <ul class="nav nav-pills nav-stacked" style="max-width: 300px; padding-top:20px;">
                 <div class = "button-wrap">
                   <%= link_to admin_jobs_path do%><button class = "rad-button wwt">管理者面板</button><% end %>
@@ -45,7 +42,7 @@
 
 
 
-            <div class="col-md-10">
+            <div class="col-md-10 col-xs-12">
               <%= yield %>
             </div>
 

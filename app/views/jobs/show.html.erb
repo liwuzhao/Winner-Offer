@@ -26,35 +26,35 @@
 
 
           <div class="row">
-              <div class="col-md-4 col-lg-4">
+              <div class="col-md-4 col-lg-4 col-xs-4">
                   <p><i class="fa fa-address-card-o" aria-hidden="true"></i>  <%= @job.category %> </p>
               </div>
-              <div class="col-md-4 col-lg-4">
+              <div class="col-md-4 col-lg-4 col-xs-4">
                   <p><i class="fa fa-jpy" aria-hidden="true"></i> <%= @job.wage_lower_bound %> ~ <%= @job.wage_upper_bound %> </p>
               </div>
-              <div class="col-md-4 col-lg-4">
+              <div class="col-md-4 col-lg-4 col-xs-4">
                   <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%= @job.location %></p>
               </div>
           </div>
 
           <div class="row">
-              <div class="col-md-4 col-lg-4">
+              <div class="col-md-4 col-lg-4 col-xs-4">
                     <p>
                         <i class="fa fa-male" aria-hidden="true"></i>
                         招聘人数：<%= @job.number %>
                     </p>
               </div>
-              <div class="col-md-4 col-lg-4">
+              <div class="col-md-4 col-lg-4 col-xs-4">
                   <p><i class="fa fa-envelope" aria-hidden="true"></i> <strong><%= @job.contact_email %></strong></p>
               </div>
-              <div class="col-md-4 col-lg-4">
+              <div class="col-md-4 col-lg-4 col-xs-4">
                   <p><span><i class="fa fa-clock-o" aria-hidden="true"></i> <%= @job.created_at.strftime("%Y-%m-%d") %> </span><br></p>
               </div>
           </div>
 
           <div class="row">
               <hr>
-              <div class="col-md-4 col-lg-4">
+              <div class="col-md-4 col-lg-4 col-xs-4">
                 <strong><span>岗位要求:</sapn> </strong><br>
                 <p>
                   <%= simple_format(@job.description, class: "job-description") %>
