@@ -34,6 +34,7 @@
               <ul class="dropdown-menu">
                 <% if current_user.admin? %>
                     <li><%= link_to("<span class='fa fa-home fa-lg'></span>管理员面板".html_safe, admin_jobs_path) %></li>
+                <% else %>
                     <li><%= link_to("<span class='fa fa-file-text fa-fa-2x'></span>  投递历史".html_safe, account_jobs_path) %></li>
                 <% end %>
                     <li><%= link_to("<span class='fa fa-heart fa-fa-lg'></span> 我的收藏".html_safe, account_jobfs_path) %></li>
