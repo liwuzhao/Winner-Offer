@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+  before_action :store_current_location, :unless => :devise_controller?
+
+
   protect_from_forgery with: :exception
 
   def require_is_admin
@@ -6,6 +9,12 @@ class ApplicationController < ActionController::Base
       flash[:alert] = 'You are not admin'
       redirect_to root_path
     end
+  end
+
+  private
+
+  def store_current_location
+    store_location_for(:user, request.url)
   end
 
 end
