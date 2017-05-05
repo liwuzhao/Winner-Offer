@@ -36,7 +36,7 @@ $(document).on('click', '.working', function () {
  })
 })
 
-// 
+//
 $(window).scroll(function () {
  var $navbar = $('#navbar')
  if ($(this).scrollTop() > 100) {

@@ -134,39 +134,43 @@
 </div>
 
 
+
 <!-- 用户反馈 -->
-<div id="feedback" class="container-fluid text-center row caption1 bg-1">
-  <br>
-  <h3 class="text-center">用户反馈</h3>
-  <div class="short-line"></div>
-  <p class="text-center">听听他们在Winner Offer收获了什么</p><br><br>
+<section id="testimonial" class="talk-about-us row">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 col-xs-12 text-center">
+        <h2 class="section-title">用户反馈</h2>
+        <div class="short-line"></div><br>
+          <div id="talk-about-us" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#talk-about-us" data-slide-to="0" class="active"></li>
+              <li data-target="#talk-about-us" data-slide-to="1"></li>
+              <li data-target="#talk-about-us" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <p>找到一份合适的工作，更容易成为Winner！</p>
+                <%= image_tag("user1.png", :class => "img-welcome img-circle", :id => "trip1")  %>
+                <strong>Stephen</strong>
+              </div>
+              <div class="item">
+                <p>在Winner Offer招聘，总是能找到合适的人才。</p>
+                <%= image_tag("user2.png", :class => "img-welcome img-circle", :id => "trip1")  %>
+                <strong>Cathy</strong>
+              </div>
+              <div class="item">
+                <p>职位多、质量高，是我选择Winner Offer的原因</p>
+                <%= image_tag("user3.png", :class => "img-welcome img-circle", :id => "trip1")  %>
+                <strong>Tomas </strong>
+              </div>
 
-
-  <div class="row text-center">
-    <div class="col-md-4 col-xs-4">
-      <div class="">
-        <%= image_tag("user1.png", :class => "img-welcome img-circle", :id => "trip1")  %>
-        <p><strong>Stephen</strong></p>
-        <p>在这里找到一份合适自己的工作，更容易成为Winner！</p>
-      </div>
-    </div>
-    <div class="col-md-4 col-xs-4">
-      <div class="">
-        <%= image_tag("user2.png", :class => "img-welcome img-circle", :id => "trip1")  %>
-        <p><strong>Cathy</strong></p>
-        <p>在Winner Offer招聘，总是能找到合适的人才</p>
-      </div>
-    </div>
-    <div class="col-md-4 col-xs-4">
-      <div class="">
-        <%= image_tag("user3.png", :class => "img-welcome img-circle", :id => "trip1")  %>
-        <p><strong>Tomas</strong></p>
-        <p>职位多、质量高，是我选择Winner Offer的原因</p>
+            </div>
+          </div>
       </div>
     </div>
   </div>
-</div>
-
+</section>
 
 
 
