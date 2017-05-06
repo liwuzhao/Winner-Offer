@@ -22,6 +22,10 @@
 
 
 
+$('.carousel').carousel(‘pause’)
+
+
+
 // top和点赞
 $(document).on('click', '.working', function () {
  alert('功能暂未完成，敬请期待...')
