@@ -1,5 +1,4 @@
 <div class="container-fluid jobs-show-page">
-  <h1 class="text-center" style="font-family:Verdana">搜索结果</h1><br>
   <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
     <div class="pull-right">
       <%= link_to(content_tag(:i, " 查看所有工作", class: "fa fa-reply-all"), jobs_path) %> |
@@ -9,10 +8,11 @@
     <% if @jobs.blank?%>
       <br>
       <div>
-        抱歉，没有找到对应的搜索结果，请重新搜索。
+        <h2 class="no-job-data">抱歉，没有找到对应的搜索结果，请重新搜索。 <span class="fa fa-frown-o"></span></h2>
       </div>
     <% else %>
       <br>
+      <h1 class="text-center" style="font-family:Verdana">搜索结果</h1><br>
       <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
       <div class="text-center">
         <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
