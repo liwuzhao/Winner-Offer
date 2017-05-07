@@ -32,8 +32,8 @@ class JobsController < ApplicationController
     @job = Job.find(params[:id])
 
     if @job.is_hidden
-      flash[:warning] = "This Job already archieved"
-      redirect_to root_path
+      flash[:warning] = "你没有权限查看该工作"
+      redirect_to jobs_path
     end
   end
 
