@@ -17,23 +17,28 @@
 
 
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
- @import "font-awesome";
- @import url(http://fonts.googleapis.com/css?family=Roboto);
+@import "bootstrap-sprockets";
 
- .bg-1 p {font-style: italic;}
+@import "bootstrap";
+
+@import "font-awesome";
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+.bg-1 p {
+  font-style: italic;
+}
 
 
- // -------- myself ---------
- .no-job-data{
-   margin-top: 120px;
-   color: #555;
-   font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
-   text-align: center;
- }
+ //-------- myself ---------
+ .no-job-data {
+  margin-top: 120px;
+  color: #555;
+  font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+  text-align: center;
+}
 
- .sidebar {
+.sidebar {
   display: none;
   position: fixed;
   z-index: 998;
@@ -44,218 +49,223 @@
   line-height: 20px;
   * {
     box-sizing: border-box;
-  }
-  ul {
-    padding: 0;
-  }
-  li {
-    position: relative;
-    display: block;
-    height: 40px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    text-align: center;
-    cursor: pointer;
-    margin-top: 8px;
-    background: #fbfbfb;
-    line-height: 42px;
-    &:hover {
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  position: relative;
+  display: block;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 8px;
+  background: #fbfbfb;
+  line-height: 42px;
+  &: hover {
       background: #eee;
-    }
+}
     &:first-child {
-      margin-top: 0;
-    }
+  margin-top: 0;
+}
     &.backtop i {
-      font-size: 18px;
-    }
+  font-size: 18px;
+}
     &.support {
-      i {
+  i {
         font-size: 20px;
-      }
-      .ewm {
-        line-height: 22px;
-        display: none;
-        left: 0px;
-        opacity: 0;
-        position: absolute;
-        z-index: 1;
-        opacity: 0;
-        display: none;
-        left: 0;
-        top: 50%;
-        margin-top: -68px;
-        width: 136px;
-        height: 136px;
-        padding-right: 20px;
-        p {
+}
+
+.ewm {
+  line-height: 22px;
+  display: none;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  display: none;
+  left: 0;
+  top: 50%;
+  margin-top: -68px;
+  width: 136px;
+  height: 136px;
+  padding-right: 20px;
+  p {
           background: #eee;
-          border-radius: 3px;
-          padding: 12px;
-        }
+  border-radius: 3px;
+  padding: 12px;
+}
       }
     }
-    i {
-      color: #555;
-    }
+
+i {
+  color: #555;
+}
   }
 }
 
- #trip1 {
-     transition: box-shadow 0.7s;
- }
- #trip1:hover{
-   box-shadow: 5px 0px 40px rgba(0,0,0, 0.9)
- }
+#trip1 {
+  transition: box-shadow 0.7s;
+}
 
- .add_job{
-   min-width: 65%;
- }
+#trip1:hover {
+  box-shadow: 5px 0px 40px rgba(0,0,0, 0.9)
+}
 
- .add_job_description{
-   min-height: 150px;
- }
+.add_job {
+  min-width: 65%;
+}
 
- .job-resume-box{
-   min-height: 475px;
-   margin-top: 125px;
+.add_job_description {
+  min-height: 150px;
+}
 
-   h3{
+.job-resume-box {
+  min-height: 475px;
+  margin-top: 125px;
+  h3{
      text-align: center;
-   }
- }
- .resume-content{
-   height: 200px !important;
-   width: 118%;
- }
- .resume-attachment{
-   font-size: 16px;
- }
- .wage{
-   width: 100px;
-   border-radius: 5px;
+}
  }
 
- .wage-form{
-   font-weight: 600;
-   font-size: 16px;
-   color: #666;
- }
+.resume-content {
+  height: 200px !important;
+  width: 118%;
+}
+
+.resume-attachment {
+  font-size: 16px;
+}
+
+.wage {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.wage-form {
+  font-weight: 600;
+  font-size: 16px;
+  color: #666;
+}
 
 .nav-tabs li a {
-    color: #777;
+  color: #777;
 }
 
- .logo{
-   margin-right: 30px;
- }
+.logo {
+  margin-right: 30px;
+}
 
- .img-welcome {
-     width: 128px;
-     height: 128px;
-     border: 10px solid transparent;
- }
+.img-welcome {
+  width: 128px;
+  height: 128px;
+  border: 10px solid transparent;
+}
 
 
  // 搜索框
- .input-group {
-     position: relative;
-     display: table;
-     border-collapse: separate;
-     width: 250px; //加上width
- }
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  width: 250px;
+  //加上width
+}
 
- .form-group {
-     margin-bottom: 10px;
-     margin-top: 10px;
-     margin-right: 100px;
-  }
+.form-group {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 100px;
+}
 
   //登录弹窗宽度
-  .form-inputs{
-    width: 390px;
-  }
+.form-inputs {
+  width: 390px;
+}
 
+.welcome_content {
+  background-color: rgb(139,157,169);
+  margin-top: -20px;
+  padding-bottom: 25px;
+}
 
- .welcome_content{
-   background-color: rgb(139,157,169);
-   margin-top: -20px;
-   padding-bottom: 25px;
- }
+.navbar_fix {
+  margin-top: 55px;
+}
 
+.flash {
+  margin-bottom: -20px;
+  border-radius: 0;
+  //圆角为0
+}
 
- .navbar_fix{
-   margin-top: 55px;
- }
-
- .flash{
-   margin-bottom: -20px;
-   border-radius: 0;//圆角为0
-  }
-
-.input{
+.input {
   height: 120px;
 }
 
- p {
- font-size: 16px;
- line-height: 1.5;
- }
- .jobs_page_size{
-   font-size: 15px;
-   font-family:Geneva;
-   width: 70%;
- }
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
 
- .back-color{
+.jobs_page_size {
+  font-size: 15px;
+  font-family: Geneva;
+  width: 70%;
+}
+
+.back-color {
   background-color: #9E9E9E;
- }
+}
 
- .row-flash {
-   margin-bottom: 1000px;
- }
+.row-flash {
+  margin-bottom: 1000px;
+}
 
- img.img-thumbnail{
-   border:0
- }
+img.img-thumbnail {
+  border: 0
+}
 
+.list_at_jobs-list {
+  border: 1px solid #ccc;
+  margin: 3% 0;
+  padding: 5px;
+  box-shadow: 3px 3px 2px #ccc;
+  transition: 0.5s;
+}
 
+.list {
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5% 0;
+  box-shadow: 3px 3px 2px #ccc;
+  transition: 0.5s;
+}
 
- .list_at_jobs-list{
-   border: 1px solid #ccc;
-   margin: 3% 0;
-   padding: 5px;
-   box-shadow: 3px 3px 2px #ccc;
-   transition: 0.5s;
- }
+.list:hover {
+  box-shadow: 3px 3px 0px transparent;
+  transition: 0.5s;
+}
 
- .list{
-   border: 1px solid #ccc;
-   padding: 5px;
-   margin: 5% 0;
-   box-shadow: 3px 3px 2px #ccc;
-   transition: 0.5s;
- }
+.font {
+  font-family: Tahoma;
+  font-size: 20px;
+  color: gray;
+  background-color: rgb(150, 214, 230);
+}
 
- .list:hover{
-   box-shadow: 3px 3px 0px transparent;
-   transition: 0.5s;
- }
+.up-arrow {
+  color: gray;
+}
 
- .font {
-   font-family:Tahoma;
-   font-size: 20px;
-   color: gray;
-   background-color: rgb(150, 214, 230);
- }
-
-
- .up-arrow{
-   color: gray;
- }
-
- a:link {
-   text-decoration: none;
- }
+a:link {
+  text-decoration: none;
+}
 
 
 
@@ -264,58 +274,67 @@
 
 
  html {
-    position: relative;
-    min-height: 100%;
-  }
+  position: relative;
+  min-height: 100%;
+}
 
 
 
- // main{
- //   padding-bottom:100px;/* main的padding-bottom值要等于或大于footer的height值 */
- // }
+ //main {
+  //   padding-bottom: 100px;
+/* main的padding-bottom值要等于或大于footer的height值 */
+  //
+}
 
- footer{
-   position: absolute;
-   bottom: 0;
-   width: 100%;
-   height: 25px;
-   color: white;
- }
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  color: white;
+}
+
+footer .footer-below {
+  margin-top: 25px;
+  padding: 25px 0;
+  background-color: rgb(34,34,34);
+}
 
 
 
- footer .footer-below {
-     margin-top: 25px;
-     padding: 25px 0;
-     background-color: rgb(34,34,34);
- }
-
-
-
- // --------button---------
+ //--------button---------
  // size
   .btn-lg, .btn-group-lg > .btn {
-     padding: 8px 16px;//通过padding来决定btn的大小
-     font-size: 20px;//btn文字大小
-     letter-spacing: 3px;//调整文字间距
-     border-radius: 3px;//btn圆角
-     width: 200px;//这里用指定宽度把btn拉得更长
- }
+  padding: 8px 16px;
+  //通过padding来决定btn的大小
+     font-size: 20px;
+  //btn文字大小
+     letter-spacing: 3px;
+  //调整文字间距
+     border-radius: 3px;
+  //btn圆角
+     width: 200px;
+  //这里用指定宽度把btn拉得更长
+}
 
- // color
+ //color
  .btn-button {
-     color: rgb(2,2,2);//字体颜色
+  color: rgb(2,2,2);
+  //字体颜色
 
-     background-color: #FFC107;//背景颜色
+     background-color: #FFC107;
+  //背景颜色
 
-     border-color: #FFC107;//边框颜色
+     border-color: #FFC107;
+  //边框颜色
+}
 
- }
-
- .btn-button:hover {
-     background-color: #009ac9;//鼠标放置在btn上的背景颜色
-     border-color: #009ac9;//鼠标放置在btn上的边框颜色
- }
+.btn-button:hover {
+  background-color: #009ac9;
+  //鼠标放置在btn上的背景颜色
+     border-color: #009ac9;
+  //鼠标放置在btn上的边框颜色
+}
 
 
  //---------Content---------
@@ -326,87 +345,93 @@
   top: 20px;
   padding-bottom: 40px;
   background-color: rgb(229,229,229);
- }
+}
+
+.thumbnail {
+  border: 0 none;
+  box-shadow: none;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  background-color: rgb(229,229,229);
+}
 
 
- .thumbnail {
-    border: 0 none;
-    box-shadow: none;
-    margin-top: 15px;
-    margin-bottom: 50px;
-    background-color: rgb(229,229,229);
- }
 
+ //-------------Navbar-------------
+ .navbar {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
+.navbar-default {
+  background-color: #212121;
+  //背景颜色
 
- // -------------Navbar-------------
- .navbar{
-   padding-left: 20px;
-   padding-right: 20px;
- }
+     border-color: #212121;
+  //边框色
 
- .navbar-default {
-     background-color: #212121;  //背景颜色
+     margin-bottom: 0;
+  //底部 margin 不撑开距离
+}
 
-     border-color: #212121; //边框色
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 0;
+    //圆角为0
+  }
+}
 
-     margin-bottom: 0; //底部 margin 不撑开距离
- }
+.navbar-default .navbar-brand {
+  color: #fff;
+  padding: 10px 15px;
+  //上下10px，左右15px
+   line-height: 30px;
+  //文字行高
+}
 
- @media (min-width: 768px) {
-   .navbar {
-     border-radius: 0; //圆角为0
-   }
- }
-
- .navbar-default .navbar-brand {
-   color: #fff;
-
-   padding: 10px 15px; //上下10px，左右15px
-   line-height: 30px; //文字行高
- }
-
- .navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:hover,
  .navbar-default .navbar-brand:focus {
-   color: #FF6F00; //鼠标放置在链接上的文字颜色
-
-   background-color: transparent; //鼠标放置在链接上的背景颜色，这里设为透明
- }
-
- .navbar-default .navbar-nav > li > a{
-   color: #fff;
- }
-
- .navbar-default .navbar-nav > li > a:hover,
- .navbar-default .navbar-nav > li > a:focus {
-   color: #FF6F00;
+  color: #FF6F00;
+  //鼠标放置在链接上的文字颜色
 
    background-color: transparent;
- }
- .navbar-default .navbar-nav > .active > a,
+  //鼠标放置在链接上的背景颜色，这里设为透明
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+ .navbar-default .navbar-nav > li > a:focus {
+  color: #FF6F00;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a,
  .navbar-default .navbar-nav > .active > a:hover,
  .navbar-default .navbar-nav > .active > a:focus {
-   color: #FF6F00;
+  color: #FF6F00;
+  background-color: #FFE0B2;
+}
 
-   background-color: #FFE0B2;
-
- }
-
- .navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a,
  .navbar-default .navbar-nav > .open > a:focus,
  .navbar-default .navbar-nav > .open > a:hover {
-   background-color: #212121;
+  background-color: #212121;
+  color: #FF6F00;
+}
 
-   color: #FF6F00;
-
- }
-
-  .navbar-brand > img {
-     display: inline-block; //图片和链接文字显示在同一行
-     margin-right: 10px; //图片和链接文字拉开一点距离
-     width: 25px; //定制图片宽度
-     height: 25px; //定制图片高度
- }
+.navbar-brand > img {
+  display: inline-block;
+  //图片和链接文字显示在同一行
+     margin-right: 10px;
+  //图片和链接文字拉开一点距离
+     width: 25px;
+  //定制图片宽度
+     height: 25px;
+  //定制图片高度
+}
 
 
 
@@ -415,62 +440,56 @@
 
  //Dropdown
  .dropdown-menu li a:hover {
-     background-color: grey !important;
- }
+  background-color: grey !important;
+}
 
  /* Dropdown links */
- .dropdown-menu li a {
-     color: #000 !important;
- }
+.dropdown-menu li a {
+  color: #000 !important;
+}
 
 
 
 
  /*===== user ====*/
- .user_setup{
-     height: 770px;
-     background-image: image-url("back_in_user.jpg");
-     background-repeat: no-repeat;
-     background-size: cover;
-     margin-bottom: -150px;
- }
+.user_setup {
+  height: 770px;
+  background-image: image-url("back_in_user.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: -150px;
+}
 
-
- .user_setup_content{
-     background: #fff;
-     margin-top: 50px;
-     padding-top: 20px;
-     padding-bottom: 20px;
-     box-shadow: 1px 3px 5px #333;
-     border: 5px solid #666;
-     border-radius: 25px;
-
-     opacity:0.95;
-     filter:alpha(opacity=95);
-
-     h2{
+.user_setup_content {
+  background: #fff;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 1px 3px 5px #333;
+  border: 5px solid #666;
+  border-radius: 25px;
+  opacity: 0.95;
+  filter: alpha(opacity=95);
+  h2{
        text-align: center;
-     }
+}
 
+.account {
+  text-align: center;
+}
 
+.form-inputs {
+  margin-top: 25px;
+}
 
-     .account{
-       text-align: center;
-     }
-
-     .form-inputs{
-       margin-top: 25px;
-     }
-
-     .form-actions{
-       text-align: center;
-       margin-top: 35px;
-       margin-bottom: 25px;
-
-       .btn-primary{
+.form-actions {
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  .btn-primary{
          font-size: 16px;
-         letter-spacing: 1px;
-         width: 100%;
-       }
+  letter-spacing: 1px;
+  width: 100%;
+}
      }
  }

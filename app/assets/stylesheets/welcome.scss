@@ -1,183 +1,185 @@
-// Place all the styles related to the welcome controller here.
+//Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
 //  --------用户反馈----------
 .talk-about-us {
-    background-color: rgb(229,229,229);
-    padding-bottom: 140px;
-    padding-top: 60px;
-    // color: #666;
+  background-color: rgb(229,229,229);
+  padding-bottom: 140px;
+  padding-top: 60px;
+  // color: #666;
 }
 
-
 .carousel {
-    position: relative;
+  position: relative;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
-
-
 .talk-about-us .carousel-indicators {
-    bottom: -50px;
+  bottom: -50px;
 }
 
 .carousel-indicators {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    z-index: 15;
-    width: 60%;
-    margin-left: -30%;
-    padding-left: 0;
-    list-style: none;
-    text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  margin-left: -30%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
 }
 
 ol {
-    margin-top: 0;
-    margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 ol {
-    display: block;
-    list-style-type: decimal;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
+  display: block;
+  list-style-type: decimal;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
 }
 
 .talk-about-us .carousel-indicators>li {
-    background-color: #35CCC6;
-    border: 0 none;
-    height: 10px;
-    margin: 1px;
-    width: 10px;
-    border-radius: 0;
-    margin: 0 5px;
-    -moz-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  background-color: #35CCC6;
+  border: 0 none;
+  height: 10px;
+  margin: 1px;
+  width: 10px;
+  border-radius: 0;
+  margin: 0 5px;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-
 .carousel-inner>.active {
-    left: 0;
+  left: 0;
 }
 
 .talk-about-us .item>img {
-    // width: 80px;
-    // height: 80px;
-    margin: 0 auto;
-    border-radius: 50%;//照片以圆形显示，若改为20%则会变成方形照片四角为圆形倒角。
+  // width: 80px;
+  // height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  //照片以圆形显示，若改为20%则会变成方形照片四角为圆形倒角。
     border: 2px solid #ccc;
-    // margin-bottom: 10px;
+  // margin-bottom: 10px;
 }
 
-
 .talk-about-us strong {
-    margin-top: 25px;
-    font-weight: 600;
-    font-style: italic;
+  margin-top: 25px;
+  font-weight: 600;
+  font-style: italic;
 }
 
 
 //---------welcome---------
- .container-fluid .jumbotron{
-   padding-bottom: 250px;//内部的底部边距，这样按钮不会很靠近底部了
-   margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
-   border-radius: 0;//圆角为0
- }
-  .jumbotron {
-    background-image: image-url("header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+ .container-fluid .jumbotron {
+  padding-bottom: 250px;
+  //内部的底部边距，这样按钮不会很靠近底部了
+   margin: 0 -15px 20px;
+  //顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+   border-radius: 0;
+  //圆角为0
+}
 
-  .main-heading {
-    font-family: 'Open sans', sans-serif;
-    font-weight: 300;
-    text-align: center;
-    letter-spacing: 9px;
-    text-transform: uppercase;
-    color: rgb(238,238,238);
-    text-align: center;
-    margin-top: 280px;
-  }
+.jumbotron {
+  background-image: image-url("header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .slogan {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-family: "Microsoft Yahei", 微软雅黑;
-    text-align: center;
-    color: rgb(2,2,2);//字体颜色
-  }
+.main-heading {
+  font-family: 'Open sans', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  color: rgb(238,238,238);
+  text-align: center;
+  margin-top: 280px;
+}
 
-  .lead {
-    margin-bottom: 60px;
-    text-align: center;
-    color: white;
-  }
+.slogan {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: "Microsoft Yahei", 微软雅黑;
+  text-align: center;
+  color: rgb(2,2,2);
+  //字体颜色
+}
 
-
+.lead {
+  margin-bottom: 60px;
+  text-align: center;
+  color: white;
+}
 
 .short-line {
-    display: block;
-    background: #35CCC6;
-    border-style: none;
-    border-radius: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    z-index: 53;
-    width: 100px;
-    height: 1.5px;
-    position: relative;
+  display: block;
+  background: #35CCC6;
+  border-style: none;
+  border-radius: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  z-index: 53;
+  width: 100px;
+  height: 1.5px;
+  position: relative;
 }
 
-.bottom{
-    text-align: center;
-    height: 200px;
-    background: image_url("bottom.png") no-repeat scroll top center/ cover;
-
-    div{
+.bottom {
+  text-align: center;
+  height: 200px;
+  background: image_url("bottom.png") no-repeat scroll top center/ cover;
+  div{
       margin-top: 15px;
-    }
+}
 }
 
-.bs-slider{
-    overflow: hidden;
-    max-height: 700px;
-    position: relative;
-    background: #000000;
+.bs-slider {
+  overflow: hidden;
+  max-height: 700px;
+  position: relative;
+  background: #000000;
 }
+
 .bs-slider:hover {
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
 }
+
 .bs-slider:active {
-    cursor: -moz-grabbing;
-    cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
 }
+
 .bs-slider .bs-slider-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.40);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.40);
 }
+
 .bs-slider > .carousel-inner > .item > img,
 .bs-slider > .carousel-inner > .item > a > img {
-    margin: auto;
-    width: 100% !important;
+  margin: auto;
+  width: 100% !important;
 }
