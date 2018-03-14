@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
 
@@ -20,35 +19,3 @@
 
 
 $('.carousel').carousel(‘pause’)
-
-
-
-// top和点赞
-$(document).on('click', '.working', function () {
- alert('功能暂未完成，敬请期待...')
- // return false
-}).on('click', '.backtop', function () {
- $('body').animate({'scrollTop': 0}, 500)
-}).on('mouseenter', '.support', function () {
- $('.ewm').show().stop().animate({left: '-136px', opacity: 1}, 500)
-}).on('mouseleave', '.support', function () {
- $('.ewm').stop().animate({opacity: 0}, 500, function () {
-  $(this).css('left', 0).hide()
- })
-})
-
-//
-$(window).scroll(function () {
- var $navbar = $('#navbar')
- if ($(this).scrollTop() > 100) {
-  $navbar.addClass('black').removeClass('transparent')
- } else {
-  $navbar.removeClass('black').addClass('transparent')
- }
-
- if ($(this).scrollTop() > 500) {
-  $('#sidebar').fadeIn()
- } else {
-  $('#sidebar').fadeOut()
- }
-})

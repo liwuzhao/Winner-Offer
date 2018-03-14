@@ -11,7 +11,7 @@ Rails.application.routes.draw do
         post :publish
         post :hide
       end
-    resources :resumes
+    resources :resumes, only: [:index]
     end
   end
 
@@ -20,16 +20,16 @@ Rails.application.routes.draw do
       post :join
       post :quit
     end
-    resources :resumes
+    resources :resumes, only: [:index]
     collection do
       get :search
     end
   end
 
   namespace :account do
-    resources :users
-    resources :jobs
-    resources :jobfs
+    resources :users, only: [:edit, :update]
+    resources :jobs, only: [:index]
+    resources :jobfs, only: [:index]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

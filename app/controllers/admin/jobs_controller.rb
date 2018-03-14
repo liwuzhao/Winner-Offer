@@ -1,15 +1,10 @@
-class Admin::JobsController < ApplicationController
+class Admin::JobsController < Admin::BaseController
   before_action :authenticate_user! , only: [:new, :create, :update, :edit, :destroy]
   before_action :find_job_and_check_permission , only: [:edit, :update, :destroy]
-  before_action :require_is_admin
-  layout "admin"
 
   def index
     @jobs = current_user.jobs.paginate(:page => params[:page], :per_page => 15)
   end
-
-
-
 
   def new
     @job = Job.new

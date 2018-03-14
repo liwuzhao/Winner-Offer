@@ -2,9 +2,7 @@ class JobsController < ApplicationController
   before_action :validate_search_key, only: [:search]
   before_action :authenticate_user!, only: [:quit]
 
-
   def index
-
     # 不分类
     @jobs = Job.published
 
@@ -24,9 +22,7 @@ class JobsController < ApplicationController
               @jobs.recent.paginate(:page => params[:page], :per_page => 10)
             end
 
-
   end
-
 
   def show
     @job = Job.find(params[:id])
@@ -66,16 +62,15 @@ class JobsController < ApplicationController
     redirect_to job_path(@job)
   end
 
-
-
   def search
-      if @query_string.present?
-        search_result = Job.published.ransack(@search_criteria).result(:distinct => true)
-        @jobs = search_result.paginate(:page => params[:page], :per_page => 5 )
-      end
+    if @query_string.present?
+      search_result = Job.published.ransack(@search_criteria).result(:distinct => true)
+      @jobs = search_result.paginate(:page => params[:page], :per_page => 5 )
+    end
   end
 
   protected
+
   def validate_search_key
     @query_string = params[:q].gsub(/\\|\'|\/|\?/, "") if params[:q].present?
     @search_criteria = search_criteria(@query_string)
